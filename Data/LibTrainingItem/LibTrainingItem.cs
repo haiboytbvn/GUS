@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -30,5 +31,11 @@ namespace GUSLibrary.Data
         public string Value { get; set; }
 
         #endregion
+
+        #region Related Properties
+        
+        public virtual List<RelTrainingTrainingItem> RelTrainingTrainingItem { get; set; }
+
+        #endregion Related Properties
     }
 }

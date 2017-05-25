@@ -135,7 +135,7 @@ namespace GUSLibrary
             TinyMapper.Bind<LibShipping, ShippingViewModel>();
             TinyMapper.Bind<LibTraining, TrainingViewModel>();
             TinyMapper.Bind<LibTrainingItem, TrainingItemViewModel>();
-            //TinyMapper.Bind<LibTrainingAndTrainingItem, TrainingAndTrainingItemViewModel>();
+            TinyMapper.Bind<RelTrainingTrainingItem, RelTrainingTrainingItemViewModel>();
 
             TinyMapper.Bind<LibAccessoryCategory, AccessoryCategoryViewModel>();
             TinyMapper.Bind<LibAccessoryProductName, AccessoryProductNameViewModel>();

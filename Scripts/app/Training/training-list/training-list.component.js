@@ -1,4 +1,4 @@
-System.register(["@angular/core", "@angular/forms", "../shared/training.service", "../shared/training.model", "../../Pagination/shared/pagination.model", "../../Pagination/shared/generalsearch.model", "@angular/router", "../../auth.service", "../../Brand/shared/brand.service"], function (exports_1, context_1) {
+System.register(["@angular/core", "@angular/forms", "../shared/training.service", "../shared/training.model", "../../Pagination/shared/pagination.model", "../../Pagination/shared/generalsearch.model", "@angular/router", "../../auth.service", "../../Brand/shared/brand.service", "../../TrainingItem/shared/trainingitem.service"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10,7 +10,7 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, forms_1, training_service_1, training_model_1, pagination_model_1, generalsearch_model_1, router_1, auth_service_1, brand_service_1, TrainingListComponent;
+    var core_1, forms_1, training_service_1, training_model_1, pagination_model_1, generalsearch_model_1, router_1, auth_service_1, brand_service_1, trainingitem_service_1, TrainingListComponent;
     return {
         setters: [
             function (core_1_1) {
@@ -39,17 +39,21 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
             },
             function (brand_service_1_1) {
                 brand_service_1 = brand_service_1_1;
+            },
+            function (trainingitem_service_1_1) {
+                trainingitem_service_1 = trainingitem_service_1_1;
             }
         ],
         execute: function () {
             TrainingListComponent = (function () {
-                function TrainingListComponent(trainingService, authService, router, fb, acctypeService, brandService) {
+                function TrainingListComponent(trainingService, authService, router, fb, acctypeService, brandService, trainingItemService) {
                     this.trainingService = trainingService;
                     this.authService = authService;
                     this.router = router;
                     this.fb = fb;
                     this.acctypeService = acctypeService;
                     this.brandService = brandService;
+                    this.trainingItemService = trainingItemService;
                     this.title = "Training";
                     this.pagesizearr = [10, 20, 30, 0];
                     this.isFormValuesChanged = false;
@@ -112,8 +116,10 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                     jQuery('#myModalAdd').modal('hide');
                 };
                 TrainingListComponent.prototype.onAdd = function () {
+                    var _this = this;
                     jQuery('#txtName').val('');
                     jQuery('#ckIsActive').prop('checked', true);
+                    this.trainingItemService.getTrainingItemList(this.searchModel).subscribe(function (items) { return _this.trainingitems = items.Data; }, function (error) { return _this.errorMessage = error; });
                 };
                 TrainingListComponent.prototype.onUpdate = function (data) {
                     var _this = this;
@@ -145,6 +151,7 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                         this.trainingService.get(id).subscribe(function (data) {
                             _this.data = data;
                         });
+                        this.trainingItemService.getTrainingItemList(this.searchModel).subscribe(function (items) { return _this.trainingitems = items.Data; }, function (error) { return _this.errorMessage = error; });
                     }
                 };
                 TrainingListComponent.prototype.isFormChanged = function (value) {
@@ -165,14 +172,15 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                 core_1.Component({
                     selector: 'training',
                     templateUrl: 'app/Training/training-list/training-list.component.html',
-                    providers: [training_service_1.TrainingService, forms_1.FormBuilder, brand_service_1.BrandService]
+                    providers: [training_service_1.TrainingService, forms_1.FormBuilder, brand_service_1.BrandService, trainingitem_service_1.TrainingItemService]
                 }),
                 __metadata("design:paramtypes", [training_service_1.TrainingService,
                     auth_service_1.AuthService,
                     router_1.Router,
                     forms_1.FormBuilder,
                     training_service_1.TrainingService,
-                    brand_service_1.BrandService])
+                    brand_service_1.BrandService,
+                    trainingitem_service_1.TrainingItemService])
             ], TrainingListComponent);
             exports_1("TrainingListComponent", TrainingListComponent);
         }

@@ -63,7 +63,7 @@ System.register(["@angular/core", "@angular/forms", "../shared/trainingitem.serv
                         value: ["", [forms_1.Validators.required]],
                         isactive: [true]
                     });
-                    this.data = new trainingitem_model_1.TrainingItem("", false, "", "", "");
+                    this.data = new trainingitem_model_1.TrainingItem("", false, "", null, null);
                     this.itemid = "";
                 };
                 TrainingItemListComponent.prototype.changePage = function (i) {
@@ -85,12 +85,12 @@ System.register(["@angular/core", "@angular/forms", "../shared/trainingitem.serv
                 TrainingItemListComponent.prototype.onSubmit = function (data) {
                     var _this = this;
                     console.log(data);
-                    var trainingitem = new trainingitem_model_1.TrainingItem("", data.isactive, data.value, "", "");
+                    var trainingitem = new trainingitem_model_1.TrainingItem("", data.isactive, data.value, null, null);
                     this.trainingitemService.add(trainingitem).subscribe(function (data) {
                         if (data.error == null) {
                             _this.trainingitemService.getTrainingItemList(_this.searchModel).subscribe(function (items) { return _this.ACdata = items; }, function (error) { return _this.errorMessage = error; });
                             alert("added successfully");
-                            _this.data = new trainingitem_model_1.TrainingItem("", false, "", "", "");
+                            _this.data = new trainingitem_model_1.TrainingItem("", false, "", null, null);
                             jQuery('#txtName').val('');
                             jQuery('#ckIsActive').prop('checked', true);
                         }
@@ -137,6 +137,7 @@ System.register(["@angular/core", "@angular/forms", "../shared/trainingitem.serv
                     this.itemid = id;
                     if (id !== "") {
                         this.trainingitemService.get(id).subscribe(function (data) {
+                            console.log(data);
                             _this.data = data;
                         });
                     }

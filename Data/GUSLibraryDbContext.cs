@@ -48,7 +48,6 @@ namespace GUSLibrary.Data
             modelBuilder.Entity<LibShipping>().ToTable("LibShipping");
             modelBuilder.Entity<LibTraining>().ToTable("LibTraining");
             modelBuilder.Entity<LibTrainingItem>().ToTable("LibTrainingItem");
-            //modelBuilder.Entity<LibTrainingAndTrainingItem>().ToTable("LibTrainingAndTrainingItem");
 
             // General Data Table
             modelBuilder.Entity<LibAccessoryType>().ToTable("LibAccessoryType");
@@ -89,7 +88,8 @@ namespace GUSLibrary.Data
             modelBuilder.Entity<RelGraphicCategoryProductName>().ToTable("RelGraphicCategoryProductName");
             modelBuilder.Entity<RelGraphicTypeCategory>().ToTable("RelGraphicTypeCategory");
             modelBuilder.Entity<RelFabricsTypeCategory>().ToTable("RelFabricsTypeCategory");
-
+            modelBuilder.Entity<RelTrainingTrainingItem>().ToTable("LibTrainingAndTrainingItem");
+            //modelBuilder.Entity<RelTrainingTrainingItem>().HasKey(x => x.Id);
 
             //Project Table
             modelBuilder.Entity<ProProject>().ToTable("ProProject");
@@ -138,7 +138,6 @@ namespace GUSLibrary.Data
         public DbSet<LibShipping> Shippings { get; set; }
         public DbSet<LibTraining> Trainings { get; set; }
         public DbSet<LibTrainingItem> TrainingItems { get; set; }
-        //public DbSet<LibTrainingAndTrainingItem> TrainingAndTrainingItems { get; set; }
 
         public DbSet<LibAccessoryType> AccessoryTypes { get; set; }
         public DbSet<LibAccessoryCategory> AccessoryCategories { get; set; }
@@ -173,6 +172,8 @@ namespace GUSLibrary.Data
         public DbSet<RelFabricsTypeCategory> RelFabricsTypeCategorys { get; set; }
         public DbSet<RelGraphicTypeCategory> RelGraphicTypeCategorys { get; set; }
         public DbSet<RelGraphicCategoryProductName> RelGraphicCategoryProductNames { get; set; }
+        public DbSet<RelTrainingTrainingItem> RelTrainingTrainingItems { get; set; }
+
         public DbSet<LibFabricProductType> FabricProductTypes { get; set; }
         public DbSet<LibFabricsProductName> FabricsProductNames { get; set; }
         public DbSet<LibFabricWeight> FabricWeights { get; set; }

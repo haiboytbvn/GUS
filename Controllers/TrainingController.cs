@@ -84,7 +84,7 @@ namespace GUSLibrary.Controllers
 
         // GET by Id
         [HttpGet("GetTrainingById/{id}")]
-        public IActionResult GetSeasonById(Guid id)
+        public IActionResult GetTrainingById(Guid id)
         {
             var item = DbContext.Trainings.FirstOrDefault(x => x.Id == id);
             if (item != null) return new JsonResult(TinyMapper.Map<TrainingViewModel>(item), DefaultJsonSettings);

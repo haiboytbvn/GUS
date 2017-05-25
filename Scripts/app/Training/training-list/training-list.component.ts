@@ -10,12 +10,14 @@ import { AuthService } from "../../auth.service";
 import { SearchGeneralFilter } from "../../SearchGeneralFilter/shared/searchGeneralFilter.model";
 import { Brand } from "../../Brand/shared/brand.model";
 import { BrandService } from "../../Brand/shared/brand.service";
+import { TrainingItem } from "../../TrainingItem/shared/trainingitem.model";
+import { TrainingItemService } from "../../TrainingItem/shared/trainingitem.service";
 declare var jQuery: any;
 
 @Component({
     selector: 'training',
     templateUrl: 'app/Training/training-list/training-list.component.html',
-    providers: [TrainingService, FormBuilder, BrandService]
+    providers: [TrainingService, FormBuilder, BrandService, TrainingItemService]
 })
 
 export class TrainingListComponent {
@@ -34,12 +36,16 @@ export class TrainingListComponent {
     isFormValuesChanged = false;
     trainingEditForm: FormGroup;
     brands: Brand[];
-    constructor(private trainingService: TrainingService,
+    trainingitems: TrainingItem[];
+
+    constructor(
+        private trainingService: TrainingService,
         private authService: AuthService,
         private router: Router,
         private fb: FormBuilder,
         private acctypeService: TrainingService,
-        private brandService: BrandService
+        private brandService: BrandService,
+        private trainingItemService: TrainingItemService
     ) {
     }
 
@@ -109,6 +115,7 @@ export class TrainingListComponent {
     onAdd() {
         jQuery('#txtName').val('');
         jQuery('#ckIsActive').prop('checked', true);
+        this.trainingItemService.getTrainingItemList(this.searchModel).subscribe(items => this.trainingitems = items.Data, error => this.errorMessage = <any>error);
     }
     onUpdate(data: any) {
         // else, update it
@@ -140,6 +147,8 @@ export class TrainingListComponent {
             this.trainingService.get(id).subscribe((data) => {
                 this.data = data;
             });
+            this.trainingItemService.getTrainingItemList(this.searchModel).subscribe(items => this.trainingitems = items.Data, error => this.errorMessage = <any>error);
+
         }
     }
     isFormChanged(value) {

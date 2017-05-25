@@ -21,7 +21,7 @@
         </ul>
     </div>
     <div class="col_one_sixth notopmargin nobottommargin col_last tright">
-        <input type="button" value="Add New" class="button button-small button-red leftmargin-md notopmargin nobottommargin" data-toggle="modal" data-target="#myModalAdd">
+        <input type="button" value="Add New" class="button button-small button-red leftmargin-md notopmargin nobottommargin" (click)="onAdd()" data-toggle="modal" data-target="#myModalAdd">
     </div>
     <div class="clear"></div>
 
@@ -103,6 +103,14 @@
                         <div class="col_four_fifth col_last" >
                             <input id="checkbox-2" class="checkbox-style" name="checkbox-2" type="checkbox" formControlName="isactive" value="this.data.IsActive" autofocus>
                             <label for="checkbox-2" class="checkbox-style-1-label checkbox-small">Active</label>
+                        </div>
+                        <div class="col_full nomargin center">
+                            <div *ngIf="trainingitems">
+                                <div *ngFor="let item of trainingitems">
+                                    <input class="checkbox-style" type="checkbox" />
+                                    <label class="checkbox-style-1-label checkbox-small">{{item.Value}}</label>
+                                </div>
+                            </div>
                         </div>
                         
                          <div class="col_full nomargin center">
