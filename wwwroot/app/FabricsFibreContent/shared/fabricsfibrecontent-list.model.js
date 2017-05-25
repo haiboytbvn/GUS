@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var FabricsFibreContentListModel;context_1&&context_1.id;return{setters:[],execute:function(){FabricsFibreContentListModel=function(){function FabricsFibreContentListModel(Data,Paging){this.Data=Data,this.Paging=Paging}return FabricsFibreContentListModel}(),exports_1("FabricsFibreContentListModel",FabricsFibreContentListModel)}}});
+//# sourceMappingURL=fabricsfibrecontent-list.model.js.map

@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var FabricsProductNameListModel;context_1&&context_1.id;return{setters:[],execute:function(){FabricsProductNameListModel=function(){function FabricsProductNameListModel(Data,Paging){this.Data=Data,this.Paging=Paging}return FabricsProductNameListModel}(),exports_1("FabricsProductNameListModel",FabricsProductNameListModel)}}});
+//# sourceMappingURL=fabricsproductname-list.model.js.map

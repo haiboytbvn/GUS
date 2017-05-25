@@ -1,0 +1,446 @@
+--temp-output:E:\Project\GUS-master\GUS-master\src\GUSLibrary\obj\Debug\net461\
+--out:E:\Project\GUS-master\GUS-master\src\GUSLibrary\bin\Debug\net461\GUSLibrary.exe
+--define:DEBUG
+--define:TRACE
+--define:NET461
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--platform:x64
+--optimize:False
+--emit-entry-point:True
+--output-name:GUSLibrary
+--file-version:1.0.0.0
+--version:1.0.0.0
+--informational-version:1.0.0
+--target-framework:.NETFramework,Version=v4.6.1
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.0\lib\net451\Microsoft.AspNetCore.Antiforgery.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Authentication\1.0.0\lib\net451\Microsoft.AspNetCore.Authentication.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Authentication.Cookies\1.0.0\lib\net451\Microsoft.AspNetCore.Authentication.Cookies.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Authentication.JwtBearer\1.0.0\lib\net451\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\net451\Microsoft.AspNetCore.Authorization.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Cors\1.0.0\lib\net451\Microsoft.AspNetCore.Cors.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Cryptography.Internal\1.0.0\lib\net451\Microsoft.AspNetCore.Cryptography.Internal.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Cryptography.KeyDerivation\1.0.0\lib\net451\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.DataProtection\1.0.0\lib\net451\Microsoft.AspNetCore.DataProtection.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.DataProtection.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Diagnostics\1.0.0\lib\net451\Microsoft.AspNetCore.Diagnostics.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Diagnostics.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore\1.0.0\lib\net451\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Hosting\1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Hosting.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Html.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.AspNetCore.Html.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Http\1.0.0\lib\net451\Microsoft.AspNetCore.Http.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Http.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Http.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Http.Extensions\1.0.0\lib\net451\Microsoft.AspNetCore.Http.Extensions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Http.Features\1.0.0\lib\net451\Microsoft.AspNetCore.Http.Features.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.HttpOverrides\1.0.0\lib\net451\Microsoft.AspNetCore.HttpOverrides.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Identity\1.0.0\lib\net451\Microsoft.AspNetCore.Identity.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Identity.EntityFrameworkCore\1.0.0\lib\net451\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.JsonPatch\1.0.0\lib\netstandard1.1\Microsoft.AspNetCore.JsonPatch.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Localization\1.0.0\lib\net451\Microsoft.AspNetCore.Localization.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.ApiExplorer\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.Core\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Core.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.Cors\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Cors.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.DataAnnotations\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.Formatters.Json\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.Localization\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Localization.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.Razor\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Razor.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.Razor.Host\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Razor.Host.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.TagHelpers\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Mvc.ViewFeatures\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Razor\1.0.0\lib\net451\Microsoft.AspNetCore.Razor.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Razor.Runtime\1.0.0\lib\net451\Microsoft.AspNetCore.Razor.Runtime.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Routing\1.0.0\lib\net451\Microsoft.AspNetCore.Routing.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Routing.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Routing.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Server.IISIntegration\1.0.0\lib\net451\Microsoft.AspNetCore.Server.IISIntegration.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Server.Kestrel\1.0.0\lib\net451\Microsoft.AspNetCore.Server.Kestrel.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.Session\1.0.0\lib\net451\Microsoft.AspNetCore.Session.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.StaticFiles\1.0.0\lib\net451\Microsoft.AspNetCore.StaticFiles.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.AspNetCore.WebUtilities\1.0.0\lib\net451\Microsoft.AspNetCore.WebUtilities.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.CodeAnalysis.Common\1.3.0\lib\net45\Microsoft.CodeAnalysis.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.CodeAnalysis.CSharp\1.3.0\lib\net45\Microsoft.CodeAnalysis.CSharp.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.CSharp.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.DotNet.InternalAbstractions\1.0.0\lib\net451\Microsoft.DotNet.InternalAbstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.EntityFrameworkCore\1.0.0\lib\net451\Microsoft.EntityFrameworkCore.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.EntityFrameworkCore.Design.Core\1.0.0-preview2-final\lib\net451\Microsoft.EntityFrameworkCore.Design.Core.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.EntityFrameworkCore.Relational\1.0.0\lib\net451\Microsoft.EntityFrameworkCore.Relational.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.EntityFrameworkCore.Relational.Design\1.0.0\lib\net451\Microsoft.EntityFrameworkCore.Relational.Design.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.EntityFrameworkCore.SqlServer\1.0.0\lib\net451\Microsoft.EntityFrameworkCore.SqlServer.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Caching.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Caching.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Caching.Memory\1.0.0\lib\net451\Microsoft.Extensions.Caching.Memory.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.CommandLineUtils\1.0.0\lib\net451\Microsoft.Extensions.CommandLineUtils.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Configuration\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Configuration.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Configuration.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Configuration.Binder\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Configuration.Binder.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Configuration.EnvironmentVariables\1.0.0\lib\net451\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Configuration.FileExtensions\1.0.0\lib\net451\Microsoft.Extensions.Configuration.FileExtensions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Configuration.Json\1.0.0\lib\net451\Microsoft.Extensions.Configuration.Json.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.DependencyInjection\1.0.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.DependencyInjection.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.DependencyModel\1.0.0\lib\net451\Microsoft.Extensions.DependencyModel.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.FileProviders.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.FileProviders.Composite\1.0.0\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Composite.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.FileProviders.Physical\1.0.0\lib\net451\Microsoft.Extensions.FileProviders.Physical.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.FileSystemGlobbing\1.0.0\lib\net451\Microsoft.Extensions.FileSystemGlobbing.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Globalization.CultureInfoCache\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Globalization.CultureInfoCache.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Localization\1.0.0\lib\net451\Microsoft.Extensions.Localization.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Localization.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Localization.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Logging\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Logging.Abstractions\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Logging.Console\1.0.0\lib\net451\Microsoft.Extensions.Logging.Console.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Logging.Debug\1.0.0\lib\net451\Microsoft.Extensions.Logging.Debug.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.ObjectPool\1.0.0\lib\net451\Microsoft.Extensions.ObjectPool.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Options\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Options.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Options.ConfigurationExtensions\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.PlatformAbstractions\1.0.0\lib\net451\Microsoft.Extensions.PlatformAbstractions.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.Primitives\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Extensions.WebEncoders\1.0.0\lib\netstandard1.0\Microsoft.Extensions.WebEncoders.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.IdentityModel.Logging\1.0.0\lib\net451\Microsoft.IdentityModel.Logging.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.IdentityModel.Protocols\2.0.0\lib\net451\Microsoft.IdentityModel.Protocols.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect\2.0.0\lib\net451\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.IdentityModel.Tokens\5.0.0\lib\net451\Microsoft.IdentityModel.Tokens.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.Net.Http.Headers\1.0.0\lib\netstandard1.1\Microsoft.Net.Http.Headers.dll
+--reference:C:\Users\smart\.nuget\packages\Microsoft.VisualStudio.Web.BrowserLink.Loader\14.0.0\lib\net451\Microsoft.VisualStudio.Web.BrowserLink.Loader.dll
+--reference:C:\Users\smart\.nuget\packages\Newtonsoft.Json\9.0.1\lib\net45\Newtonsoft.Json.dll
+--reference:C:\Users\smart\.nuget\packages\Remotion.Linq\2.1.1\lib\net45\Remotion.Linq.dll
+--reference:C:\Users\smart\.nuget\packages\System.AppContext\4.1.0\ref\net46\System.AppContext.dll
+--reference:C:\Users\smart\.nuget\packages\System.Buffers\4.0.0\lib\netstandard1.1\System.Buffers.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.Concurrent.dll
+--reference:C:\Users\smart\.nuget\packages\System.Collections.Immutable\1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.dll
+--reference:C:\Users\smart\.nuget\packages\System.ComponentModel.Primitives\4.1.0\ref\net45\System.ComponentModel.Primitives.dll
+--reference:C:\Users\smart\.nuget\packages\System.ComponentModel.TypeConverter\4.1.0\ref\net45\System.ComponentModel.TypeConverter.dll
+--reference:C:\Users\smart\.nuget\packages\System.Console\4.0.0\ref\net46\System.Console.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Contracts.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Debug.dll
+--reference:C:\Users\smart\.nuget\packages\System.Diagnostics.DiagnosticSource\4.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tools.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Dynamic.Runtime.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Globalization.dll
+--reference:C:\Users\smart\.nuget\packages\System.IdentityModel.Tokens.Jwt\5.0.0\lib\net451\System.IdentityModel.Tokens.Jwt.dll
+--reference:C:\Users\smart\.nuget\packages\System.Interactive.Async\3.0.0\lib\net45\System.Interactive.Async.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.IO.dll
+--reference:C:\Users\smart\.nuget\packages\System.IO.FileSystem\4.0.1\ref\net46\System.IO.FileSystem.dll
+--reference:C:\Users\smart\.nuget\packages\System.IO.FileSystem.Primitives\4.0.1\ref\net46\System.IO.FileSystem.Primitives.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Expressions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Queryable.dll
+--reference:C:\Users\smart\.nuget\packages\System.Numerics.Vectors\4.1.1\ref\net46\System.Numerics.Vectors.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ObjectModel.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Extensions.dll
+--reference:C:\Users\smart\.nuget\packages\System.Reflection.Metadata\1.3.0\lib\portable-net45+win8\System.Reflection.Metadata.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Primitives.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Resources.ResourceManager.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Extensions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Handles.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.dll
+--reference:C:\Users\smart\.nuget\packages\System.Runtime.InteropServices.RuntimeInformation\4.0.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Numerics.dll
+--reference:C:\Users\smart\.nuget\packages\System.Runtime.Serialization.Primitives\4.1.1\ref\net46\System.Runtime.Serialization.Primitives.dll
+--reference:C:\Users\smart\.nuget\packages\System.Security.Cryptography.Algorithms\4.2.0\ref\net461\System.Security.Cryptography.Algorithms.dll
+--reference:C:\Users\smart\.nuget\packages\System.Security.Cryptography.Encoding\4.0.0\ref\net46\System.Security.Cryptography.Encoding.dll
+--reference:C:\Users\smart\.nuget\packages\System.Security.Cryptography.Primitives\4.0.0\ref\net46\System.Security.Cryptography.Primitives.dll
+--reference:C:\Users\smart\.nuget\packages\System.Security.Cryptography.X509Certificates\4.1.0\ref\net461\System.Security.Cryptography.X509Certificates.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.Extensions.dll
+--reference:C:\Users\smart\.nuget\packages\System.Text.Encodings.Web\4.0.0\lib\netstandard1.0\System.Text.Encodings.Web.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.dll
+--reference:C:\Users\smart\.nuget\packages\System.Threading.Tasks.Extensions\4.0.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.Parallel.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.ReaderWriter.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XDocument.dll
+--reference:C:\Users\smart\.nuget\packages\TinyMapper\2.0.8\lib\net45\TinyMapper.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Security.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.Linq.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Configuration.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.ComponentModel.DataAnnotations.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Transactions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Numerics.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll
+--resource:"E:\Project\GUS-master\GUS-master\src\GUSLibrary\obj\Debug\net461\GUSLibrarydotnet-compile.deps.json",GUSLibrary.deps.json
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Program.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Startup.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Classes\CodeHelper.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Classes\CompanyIdHelper.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Classes\Constants.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Classes\CustomAuthAttribute.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Classes\EnumHelper.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Classes\FileUploadValidator.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Classes\JwtProvider.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Classes\SlugHelper.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\AccessoryCategoryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\AccessoryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\AccessoryTypeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\AccessoyProductNameController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ApplicationController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ApplicationUserController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\BrandController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\CodeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ColorController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\DepartmentController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\DivisionController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\EndBuyerController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\FabricController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\FabricProductTypeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\FabricsCategoryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\FabricsFibreContentController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\FabricsFinishingController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\FabricsProductNameController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\FabricsTypeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\FabricsYarnCountController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\FabricWeightController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\GraphicCategoryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\GraphicController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\GraphicProductNameController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\GraphicTypeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\NavigationController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\POMController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProductTypeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectAccessoryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectCollaboratorController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectColorController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectColorwayAccessoryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectColorwayEmbroideryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectColorwayFabricController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectColorwayPrintController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectEmbroideryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectFabricController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectImageGalleryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectPrintController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectViewingController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ProjectWashController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ReasonForAbortingProjectController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\RelAccessoryTypeCategoryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\SeasonController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ShippingController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\ShippingTypeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\SizeRangeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\SpecController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\TrainingController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\TrainingItemController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\UserRoleController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\VendorController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\VendorProductTypeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\VendorTypeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\WashCategoryController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\WashController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\WashProductNameController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\WashTypeController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Controllers\YearController.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\DbSeeder.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\GUSLibraryDbContext.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibAccessory\LibAccessory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibAccessoryCategory\LibAccessoryCategory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibAccessoryProductName\LibAccessoryProductName.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibAccessoryType\LibAccessoryType.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibApplication\LibApplication.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibBrand\LibBrand.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibCode\LibCode.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibColor\LibColor.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibDepartment\LibDepartment.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibDivision\LibDivision.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibEndBuyer\LibEndBuyer.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibFabric\LibFabric.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibFabricProductType\LibFabricProductType.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibFabricsCategory\LbFabricsCategory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibFabricsFibreContent\LibFabricsFibreContent.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibFabricsFinishing\LibFabricsFinishing.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibFabricsProductName\LibFabricsProductName.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibFabricsType\LibFabricsType.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibFabricsYarnCount\LibFabricsYarnCount.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibFabricWeight\LibFabricWeight.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibGraphic\LibGraphic.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibGraphicCategory\LibGraphicCategory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibGraphicProductName\LibGraphicProductName.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibGraphicType\LibGraphicType.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibPOM\LibPOM.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibProductType\LibProductType.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibReasonForAbortingProject\LibReasonForAbortingProject.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibSeason\LibSeason.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibShipping\LibShipping.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibShippingType\LibShippingType.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibSizeRange\LibSizeRange.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibSpec\LibSpec.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibTraining\LibTraining.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibTrainingAndTrainingItem\LibTrainingAndTrainingItem.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibTrainingItem\LibTrainingItem.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibUser\ApplicationUser.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibUser\UserMatrix.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibUser\UserRole.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibVendor\Vendor.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibVendor\VendorBankAccount.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibVendor\VendorContact.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibVendor\VendorProduct.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibVendor\VendorProductType.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibVendor\VendorType.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibWash\LibWash.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibWashCategory\LibWashCategory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibWashProductName\LibWashProductName.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibWashType\LibWashType.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\LibYear\LibYear.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProAccessory\ProAccessory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProCollaborator\ProCollaborator.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProColor\ProColor.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProColorwayAccessory\ProColorwayAccessory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProColorwayEmbroidery\ProColorwayEmbroidery.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProColorwayFabric\ProColorwayFabric.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProColorwayPrint\ProColorwayPrint.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProEmbroidery\ProEmbroidery.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProFabric\ProFabric.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProImageGallery\ProImageGallery.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProPrint\ProPrint.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProProject\ProProject.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProProjectViewing\ProProjectViewing.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\ProWash\ProWash.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\RelAccCategoryProductName\RelAccCategoryProductName.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\RelAccessoryTypeCategory\RelAccessoryTypeCategory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\RelFabricsCategoryProductName\RelFabricsCategoryProductName.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\RelFabricsTypeCategory\RelFabricsTypeCategory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\RelGraphicCategoryProductName\RelGraphicCategoryProductName.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\RelGraphicTypeCategory\RelGraphicTypeCategory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\RelSpecPOM\RelSpecPOM.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\RelWashCategoryProductName\RelFabricsCategoryProductName.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\RelWashTypeCategory\RelWashTypeCategory.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\Data\SpecChild\LibSpecChild.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AccessoryCategoryListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AccessoryCategoryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AccessoryFilterModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AccessoryListItemViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AccessoryListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AccessoryProductNameListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AccessoryProductNameViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AccessoryTypeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AccessoryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AcessoryTypeListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\AncestorMenuItem.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ApplicationUserViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ApplicationViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\BrandListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\BrandViewModel .cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\CodeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ColorListItemViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ColorListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ColorSearchFilterViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ColorViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\DepartmentListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\DepartmentViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\DivisionListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\DivisionViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\EndBuyerListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\EndBuyerViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricListItemViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricProductTypeListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricProductTypeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsCategoryListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsCategoryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsFibreContentListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsFibreContentViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsFilterModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsFinishingListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsFinishingViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsProductNameListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsProductNameViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsTypeListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsTypeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsYarnCountListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricsYarnCountViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricWeightListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\FabricWeightViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicCategoryListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicCategoryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicFilterModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicListItemViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicProductNameListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicProductNameViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicTypeListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicTypeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\GraphicViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ImageDataViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ImageListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\MenuItem.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\Pagination.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ParentMenuItem.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\POMListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\POMofSpecViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\POMViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProductNameViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProductTypeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectAccessoryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectCollaboratorViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectColorViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectColorwayAccessoryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectColorwayEmbroideryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectColorwayFabricViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectColorwayPrintViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectEmbroideryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectFabricViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectImageGalleryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectPrintViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectSearchGeneralFilterViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectViewingViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ProjectWashViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ReasonForAbortingProjectListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ReasonForAbortingProjectViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\RelAccessoryTypeCategoryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\RelFabricCategoryDescViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\RelSpecPOMViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SearchFilterProjectViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SearchGeneralFilterViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SeasonListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SeasonViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ShippingListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ShippingTypeListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ShippingTypeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\ShippingViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SizeRangeListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SizeRangeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SpecDetailViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SpecListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SpecUpdateViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\SpecViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\TrainingAndTrainingItemListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\TrainingAndTrainingItemViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\TrainingItemListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\TrainingItemViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\TrainingListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\TrainingViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\UserMatrixViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\UserRoleViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\VendorBankAccountViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\VendorContactViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\VendorProductTypeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\VendorProductViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\VendorTypeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\VendorViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashCategoryListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashCategoryViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashDescViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashFilterModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashListItemViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashProductNameListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashProductNameViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashTypeListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashTypeViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\WashViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\YearListViewModel.cs
+E:\Project\GUS-master\GUS-master\src\GUSLibrary\ViewModels\YearViewModel.cs

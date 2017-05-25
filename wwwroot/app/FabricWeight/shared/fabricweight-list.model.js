@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var FabricWeightListModel;context_1&&context_1.id;return{setters:[],execute:function(){FabricWeightListModel=function(){function FabricWeightListModel(Data,Paging){this.Data=Data,this.Paging=Paging}return FabricWeightListModel}(),exports_1("FabricWeightListModel",FabricWeightListModel)}}});
+//# sourceMappingURL=fabricweight-list.model.js.map

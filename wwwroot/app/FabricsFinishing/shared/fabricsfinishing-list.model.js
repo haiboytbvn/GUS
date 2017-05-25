@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var FabricsFinishingListModel;context_1&&context_1.id;return{setters:[],execute:function(){FabricsFinishingListModel=function(){function FabricsFinishingListModel(Data,Paging){this.Data=Data,this.Paging=Paging}return FabricsFinishingListModel}(),exports_1("FabricsFinishingListModel",FabricsFinishingListModel)}}});
+//# sourceMappingURL=fabricsfinishing-list.model.js.map

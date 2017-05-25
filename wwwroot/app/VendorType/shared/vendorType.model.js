@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var VendorType;context_1&&context_1.id;return{setters:[],execute:function(){VendorType=function(){function VendorType(Id,DateCreated,DateModified,IsActive,Name,checked){this.Id=Id,this.DateCreated=DateCreated,this.DateModified=DateModified,this.IsActive=IsActive,this.Name=Name,this.checked=checked}return VendorType}(),exports_1("VendorType",VendorType)}}});
+//# sourceMappingURL=vendorType.model.js.map

@@ -1,0 +1,64 @@
+﻿<div class="library-header">
+    <h3 class="nomargin"><span class="nomargin nocolor">Material Library / Color /</span>Add</h3>
+</div>
+<div class="library-content-container">
+    <div class="col_half nobottommargin">
+        <div class="thumbnail-placeholder">
+            <img src="" alt="" id="imgPreview">
+        </div>      
+        <input type="button" value="Add Image" class="button button-small button-red leftmargin-md notopmargin nobottommargin fright" (click)="doUpload()">
+    </div>
+    <div class="col_half col_last nobottommargin">
+        <form class="form-user" [formGroup]="colorForm">
+            <input type="hidden" id="hdImage" value="" />
+            <table class="tableAddMaterial">
+                <tbody>
+                    <tr>
+                        <td>Buyer Color Code</td>
+                        <td><input formControlName="buyercode" type="text" class="form-control" placeholder="Enter buyer code" value="this.data.BuyerCode" /></td>
+                    </tr>
+                    <tr>
+                        <td>Color Name</td>
+                        <td><input formControlName="name" type="text" class="form-control" placeholder="Enter name" value="this.data.Name" /></td>
+                    </tr>                                                                   
+                    <tr>
+                        <td>Brand</td>
+                        <td *ngIf="brands">
+                            <select class="form-control" formControlName="brand" value="this.data.Brand">
+                                <option value="">Chose a brand</option>
+                                <option *ngFor="let brand of brands" value="{{brand.Id}}">{{brand.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>Department</td>
+                        <td *ngIf="depts">
+                            <select class="form-control" formControlName="department" value="this.data.Department">
+                                <option value="">Chose a department</option>
+                                <option *ngFor="let dept of depts" value="{{dept.Id}}">{{dept.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Division</td>
+                        <td *ngIf="divisions">
+                            <select class="form-control" formControlName="division" value="this.data.Division">
+                                <option value="">Chose a division</option>
+                                <option *ngFor="let division of divisions" value="{{division.Id}}">{{division.Name}}</option>
+                            </select>
+                          
+                        </td>
+                    </tr>
+                                     
+                    <tr>
+                        <td>Remark</td>
+                        <td><textarea formControlName="remark" name="Remark" cols="" rows="" class="form-control" value="this.data.Remark" placeholder="Enter remark"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <input type="button" class="button button-small button-red leftmargin-md notopmargin nobottommargin fright" [disabled]="!colorForm.valid" value="Save" (click)="onSubmit(this.colorForm.value)"/>
+        <input type="file" id="files" name="files" style="opacity:0" (change)="fileChangeEvent()" />
+    </div>
+    <div class="clear"></div>
+</div>

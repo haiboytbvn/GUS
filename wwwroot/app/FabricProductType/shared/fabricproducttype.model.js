@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var FabricProductType;context_1&&context_1.id;return{setters:[],execute:function(){FabricProductType=function(){function FabricProductType(Id,IsActive,Name){this.Id=Id,this.IsActive=IsActive,this.Name=Name}return FabricProductType}(),exports_1("FabricProductType",FabricProductType)}}});
+//# sourceMappingURL=fabricproducttype.model.js.map

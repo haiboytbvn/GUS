@@ -1,0 +1,153 @@
+﻿<div class="library-header">
+    <h3 class="nomargin"><span class="nomargin nocolor">Material Library / Fabric /</span>Add</h3>
+</div>
+<div class="library-content-container">
+    <div class="col_half nobottommargin">
+        <div class="thumbnail-placeholder">
+            <img src="{{this.mainimage}}" alt="" id="imgPreview">
+        </div>
+        <ul class="thumbnail-image" id="imagecontainer"></ul>
+        <input type="button" value="Add Image" class="button button-small button-red leftmargin-md notopmargin nobottommargin fright" (click)="doUpload()">
+    </div>
+    <div class="col_half col_last nobottommargin">
+        <form class="form-user" [formGroup]="fabricsForm">
+            <input type="hidden" id="hdImage" value="" />
+            <table class="tableAddMaterial">
+                <tbody>
+                    <tr>
+                        <td>Buyer Fabric Code</td>
+                        <td><input formControlName="buyercode" type="text" class="form-control" placeholder="Enter buyer code" value="this.data.BuyerCode" /></td>
+                    </tr>
+                    <tr>
+                        <td>Fabric Type</td>
+                        <td *ngIf="fabtypes">
+                            <select value="this.data.FabType" class="form-control" #fabType formControlName="fabtype" (change)="changeType(fabType.value)">
+                                <option value="">Chose a type</option>
+                                <option *ngFor="let type of fabtypes" value="{{type.Id}}">{{type.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fabric Category</td>
+                        <td *ngIf="categories">
+                            <select value="this.data.FabCategory" class="form-control" formControlName="category" #fabCategory (change)="changeCategory(fabCategory.value)" [disabled]="this.disableCategory">
+                                <option value="">Chose a category</option>
+                                <option *ngFor="let cate of categories" value="{{cate.Id}}">{{cate.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Product Name</td>
+                        <td *ngIf="productnames">
+                            <select value="this.data.FabProductName" class="form-control" formControlName="productname" [disabled]="this.disableProductName">
+                                <option value="">Chose a product name</option>
+                                <option *ngFor="let pn of productnames" value="{{pn.Id}}">{{pn.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td><input formControlName="description" type="text" class="form-control" placeholder="Enter description" value="this.data.Description" /></td>
+                    </tr>
+                    <tr>
+                        <td>Brand</td>
+                        <td *ngIf="brands">
+                            <select value="this.data.Brand" class="form-control" formControlName="brand">
+                                <option value="">Chose a brand</option>
+                                <option *ngFor="let brand of brands" value="{{brand.Id}}">{{brand.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Department</td>
+                        <td *ngIf="departments">
+                            <select value="this.data.Department" class="form-control input-medium" formControlName="department">
+                                <option value="">Chose a department</option>
+                                <option *ngFor="let dept of departments" value="{{dept.Id}}">{{dept.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Division</td>
+                        <td *ngIf="divisions">
+                            <select value="this.data.Division" class="form-control input-medium" formControlName="division">
+                                <option value="">Chose a division</option>
+                                <option *ngFor="let division of divisions" value="{{division.Id}}">{{division.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yarn Count</td>
+                        <td *ngIf="yarncounts">
+                            <select value="this.data.FabYarnCount" class="form-control input-medium" formControlName="yarncount">
+                                <option value="">Chose a yarn count</option>
+                                <option *ngFor="let yc of yarncounts" value="{{yc.Id}}">{{yc.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fibre Content</td>
+                        <td *ngIf="fibrecontents">
+                            <select value="this.data.FabFibreContent" class="form-control input-medium" formControlName="fibrecontent">
+                                <option value="">Chose a yarn fibre content</option>
+                                <option *ngFor="let content of fibrecontents" value="{{content.Id}}">{{content.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Product Type</td>
+                        <td *ngIf="producttypes">
+                            <select value="this.data.FabProductType" class="form-control input-medium" formControlName="producttype">
+                                <option value="">Chose a product type</option>
+                                <option *ngFor="let ptype of producttypes" value="{{ptype.Id}}">{{ptype.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Finishing</td>
+                        <td *ngIf="finishings">
+                            <select value="this.data.FabFinishing" class="form-control input-medium" formControlName="finishing">
+                                <option value="">Chose a finishing</option>
+                                <option *ngFor="let fin of finishings" value="{{fin.Id}}">{{fin.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fabric Weight</td>
+                        <td *ngIf="weights">
+                            <select value="this.data.FabricWeight" class="form-control input-medium" formControlName="weight">
+                                <option value="">Chose a weight</option>
+                                <option *ngFor="let weight of weights" value="{{weight.Id}}">{{weight.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Color</td>
+                        <td *ngIf="colors">
+                            <select value="this.data.Color" class="form-control input-medium" formControlName="color">
+                                <option value="">Chose a color</option>
+                                <option *ngFor="let color of colors" value="{{color.Id}}">{{color.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Supplier</td>
+                        <td><input formControlName="supplier" type="text" class="form-control" placeholder="Enter supplier" value="this.data.Supplier" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Supplier ref code</td>
+                        <td><input formControlName="suppliercode" type="text" class="form-control" placeholder="Enter supplider code" value="this.data.SupplierCode" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Remark</td>
+                        <td><textarea formControlName="remark" name="Remark" cols="" rows="" class="form-control" value="this.data.Remark"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <input type="button" class="button button-small button-red leftmargin-md notopmargin nobottommargin fright" [disabled]="!fabricsForm.valid" value="Save" (click)="onSubmit(this.fabricsForm.value)" />
+        <input type="file" id="files" name="files" style="opacity:0" (change)="fileChangeEvent()" multiple />
+    </div>
+    <div class="clear"></div>
+</div>

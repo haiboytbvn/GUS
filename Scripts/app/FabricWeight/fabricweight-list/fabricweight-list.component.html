@@ -1,0 +1,128 @@
+﻿<div class="library-header">
+    <h3 class="nomargin"><span class="nomargin nocolor">General Library / </span>{{title}}</h3>
+</div>
+<div class="library-content-container">
+    <div class="col_five_sixth notopmargin nobottommargin tright">
+        <ul class="pagination-filter" *ngFor="let size of this.pagesizearr">
+            <li *ngIf="this.ACdata?.Paging?.PageSize==size && size!=0" class="active">
+                <a href="javascript:void(0);" (click)="changeSize(size)">{{size}}</a>
+            </li>
+            <li *ngIf="this.ACdata?.Paging?.PageSize!=size && size!=0">
+                <a href="javascript:void(0);" (click)="changeSize(size)">{{size}}</a>
+            </li>
+            <li *ngIf="size==0 && this.ACdata?.Paging?.PageNumber!=0 ">
+                <a href="javascript:void(0);" (click)="changeSize(0)">All</a>
+            </li>
+            <li *ngIf="size==0 && this.ACdata?.Paging?.PageNumber==0 " class="active">
+                <a href="javascript:void(0);" (click)="changeSize(0)">All</a>
+            </li>
+
+
+        </ul>
+    </div>
+    <div class="col_one_sixth notopmargin nobottommargin col_last tright">
+        <input type="button" value="Add New" class="button button-small button-red leftmargin-md notopmargin nobottommargin" data-toggle="modal" data-target="#myModalAdd">
+    </div>
+    <div class="clear"></div>
+
+    <div class="col_full library-content">
+        <table class="libraryTable">
+            <thead>
+                <tr>
+                    <th class="sorting">Name</th>
+                    <th class="sorting">Status</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let fabricweight of ACdata?.Data">
+                    <td>{{fabricweight?.Name}}</td>
+                    <td *ngIf="fabricweight.IsActive">Active</td>
+                    <td *ngIf="!fabricweight.IsActive">Inactive</td>
+                    <td><a href="javascript:void(0);" (click)="onEdit(fabricweight.Id)" data-toggle="modal" data-target="#myModalEdit"><img src="images/icons/icon-edit.png"></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="clear"></div>
+
+    <div class="col_five_sixth notopmargin nobottommargin center">
+        <ul class="pagination-filter" *ngFor="let page of ACdata?.Paging.PageCount; let i=index;">
+            <li *ngIf="i==0 && page!=ACdata?.Paging.PageNumber && ACdata?.Paging.PageCount.length>0">
+                <a href="javascript:void(0);" *ngIf="page!=0" (click)="changePage(page)">&laquo;</a>
+                <a href="javascript:void(0);" *ngIf="page==0">&laquo;</a>
+            </li>
+
+            <li *ngIf="ACdata?.Paging.PageCount[i]==ACdata?.Paging.PageNumber && i!=0 && i!=this.ACdata?.Paging?.PageCount.length -1 && ACdata?.Paging.PageCount.length>0" class="active" (click)="changePage(page)"><a href="javascript:void(0);">{{page}}</a></li>
+            <li *ngIf="ACdata?.Paging.PageCount[i]!=ACdata?.Paging.PageNumber && i!=0 && i!=this.ACdata?.Paging?.PageCount.length -1 && ACdata?.Paging.PageCount.length>0" (click)="changePage(page)"><a href="javascript:void(0);">{{page}}</a></li>
+            <li *ngIf="i==this.ACdata?.Paging?.PageCount.length -1 && ACdata?.Paging.PageCount.length>0">
+                <a *ngIf="page!=0" (click)="changePage(page)">&raquo;</a>
+                <a *ngIf="page==0">&raquo;</a>
+            </li>
+
+        </ul>
+        <div class="pagination-numbers">{{this.ACdata?.Paging?.Show}} of {{this.ACdata?.Paging?.Total}}</div>
+    </div>
+    <div class="col_one_sixth notopmargin nobottommargin col_last tright">
+        <input type="button" value="Add New" class="button button-small button-red leftmargin-md notopmargin nobottommargin" (click)="onAdd()" data-toggle="modal" data-target="#myModalAdd">
+    </div>
+</div>
+<!-- Add Modal -->
+<div id="myModalAdd" class="modal fade" role="dialog">
+    <form [formGroup]="fabricweightAddForm">
+        <input type="hidden" />
+        <div class="modal-dialog modal-md">
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">Add New Fabric Weight</h4>
+                    </div>
+                    <div class="modal-body edit-sm">
+                        <div class="col_one_fifth">
+                            <label>Name:</label>
+                        </div>
+                        <div class="col_four_fifth col_last">
+                            <input formControlName="name" type="text" class="form-control" placeholder="Enter name" value="this.data.Name" autofocus id="txtName" />
+                            <input id="checkbox-2" class="checkbox-style" name="checkbox-2" type="checkbox" formControlName="isactive" value="this.data.IsActive" autofocus>
+                            <label for="checkbox-2" class="checkbox-style-1-label checkbox-small">Active</label>
+                        </div>
+                        <div class="col_full nomargin center">
+                            <input type="button" value="Save" class="button button-small button-red leftmargin-md notopmargin nobottommargin" [disabled]="!fabricweightAddForm.valid" (click)="onSubmit(this.fabricweightAddForm.value)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- Edit Modal -->
+<div id="myModalEdit" class="modal fade" role="dialog">
+    <form #fabricweightEditForm="ngForm" *ngIf="data">
+        <input type="hidden" />
+        <div class="modal-dialog modal-md">
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">Edit Fabric Weight</h4>
+                    </div>
+                    <div class="modal-body edit-sm">
+                        <div class="col_one_fifth">
+                            <label>Name:</label>
+                        </div>
+                        <div class="col_four_fifth col_last">
+                            <input name="hd-id" type="hidden" #id="ngModel" [(ngModel)]="data.Id" />
+                            <input name="input-name" type="text" class="form-control" placeholder="Enter name" [(ngModel)]="data.Name" #name="ngModel" autofocus required (ngModelChange)="isFormChanged($event)" />
+                            <input id="checkbox-1" class="checkbox-style" name="checkbox-1" type="checkbox" [(ngModel)]="data.IsActive" #isActive="ngModel" (ngModelChange)="isFormChanged($event)">
+                            <label for="checkbox-1" class="checkbox-style-1-label checkbox-small">Active</label>
+                        </div>
+                        <div class="col_full nomargin center">
+                            <input type="button" value="Save" class="button button-small button-red leftmargin-md notopmargin nobottommargin" [disabled]="!fabricweightEditForm.valid || !isFormValuesChanged" (click)="onUpdate(data)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var FileUpLoadModel;context_1&&context_1.id;return{setters:[],execute:function(){FileUpLoadModel=function(){function FileUpLoadModel(FileName,Size,Type,UploadPath){this.FileName=FileName,this.Size=Size,this.Type=Type,this.UploadPath=UploadPath}return FileUpLoadModel}(),exports_1("FileUpLoadModel",FileUpLoadModel)}}});
+//# sourceMappingURL=fileupload.model.js.map

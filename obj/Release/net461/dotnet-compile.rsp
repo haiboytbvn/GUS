@@ -1,0 +1,435 @@
+--temp-output:F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\obj\Release\net461\
+--out:F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\bin\Release\net461\GUSLibrary.exe
+--define:RELEASE
+--define:TRACE
+--define:NET461
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--platform:x64
+--optimize:True
+--emit-entry-point:True
+--output-name:GUSLibrary
+--file-version:1.0.0.0
+--version:1.0.0.0
+--informational-version:1.0.0
+--target-framework:.NETFramework,Version=v4.6.1
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.0\lib\net451\Microsoft.AspNetCore.Antiforgery.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Authentication\1.0.0\lib\net451\Microsoft.AspNetCore.Authentication.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Authentication.Cookies\1.0.0\lib\net451\Microsoft.AspNetCore.Authentication.Cookies.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Authentication.JwtBearer\1.0.0\lib\net451\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\net451\Microsoft.AspNetCore.Authorization.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Cors\1.0.0\lib\net451\Microsoft.AspNetCore.Cors.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Cryptography.Internal\1.0.0\lib\net451\Microsoft.AspNetCore.Cryptography.Internal.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Cryptography.KeyDerivation\1.0.0\lib\net451\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.DataProtection\1.0.0\lib\net451\Microsoft.AspNetCore.DataProtection.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.DataProtection.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Diagnostics\1.0.0\lib\net451\Microsoft.AspNetCore.Diagnostics.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Diagnostics.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore\1.0.0\lib\net451\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Hosting\1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Hosting.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Html.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.AspNetCore.Html.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Http\1.0.0\lib\net451\Microsoft.AspNetCore.Http.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Http.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Http.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Http.Extensions\1.0.0\lib\net451\Microsoft.AspNetCore.Http.Extensions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Http.Features\1.0.0\lib\net451\Microsoft.AspNetCore.Http.Features.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.HttpOverrides\1.0.0\lib\net451\Microsoft.AspNetCore.HttpOverrides.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Identity\1.0.0\lib\net451\Microsoft.AspNetCore.Identity.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Identity.EntityFrameworkCore\1.0.0\lib\net451\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.JsonPatch\1.0.0\lib\netstandard1.1\Microsoft.AspNetCore.JsonPatch.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Localization\1.0.0\lib\net451\Microsoft.AspNetCore.Localization.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.ApiExplorer\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.Core\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Core.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.Cors\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Cors.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.DataAnnotations\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.Formatters.Json\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.Localization\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Localization.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.Razor\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Razor.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.Razor.Host\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.Razor.Host.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.TagHelpers\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Mvc.ViewFeatures\1.0.0\lib\net451\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Razor\1.0.0\lib\net451\Microsoft.AspNetCore.Razor.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Razor.Runtime\1.0.0\lib\net451\Microsoft.AspNetCore.Razor.Runtime.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Routing\1.0.0\lib\net451\Microsoft.AspNetCore.Routing.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Routing.Abstractions\1.0.0\lib\net451\Microsoft.AspNetCore.Routing.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Server.IISIntegration\1.0.0\lib\net451\Microsoft.AspNetCore.Server.IISIntegration.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Server.Kestrel\1.0.0\lib\net451\Microsoft.AspNetCore.Server.Kestrel.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.Session\1.0.0\lib\net451\Microsoft.AspNetCore.Session.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.StaticFiles\1.0.0\lib\net451\Microsoft.AspNetCore.StaticFiles.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.AspNetCore.WebUtilities\1.0.0\lib\net451\Microsoft.AspNetCore.WebUtilities.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.CodeAnalysis.Common\1.3.0\lib\net45\Microsoft.CodeAnalysis.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.CodeAnalysis.CSharp\1.3.0\lib\net45\Microsoft.CodeAnalysis.CSharp.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Microsoft.CSharp.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.DotNet.InternalAbstractions\1.0.0\lib\net451\Microsoft.DotNet.InternalAbstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.EntityFrameworkCore\1.0.0\lib\net451\Microsoft.EntityFrameworkCore.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.EntityFrameworkCore.Design.Core\1.0.0-preview2-final\lib\net451\Microsoft.EntityFrameworkCore.Design.Core.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.EntityFrameworkCore.Relational\1.0.0\lib\net451\Microsoft.EntityFrameworkCore.Relational.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.EntityFrameworkCore.Relational.Design\1.0.0\lib\net451\Microsoft.EntityFrameworkCore.Relational.Design.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.EntityFrameworkCore.SqlServer\1.0.0\lib\net451\Microsoft.EntityFrameworkCore.SqlServer.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Caching.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Caching.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Caching.Memory\1.0.0\lib\net451\Microsoft.Extensions.Caching.Memory.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.CommandLineUtils\1.0.0\lib\net451\Microsoft.Extensions.CommandLineUtils.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Configuration.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.Binder\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Configuration.Binder.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.EnvironmentVariables\1.0.0\lib\net451\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.FileExtensions\1.0.0\lib\net451\Microsoft.Extensions.Configuration.FileExtensions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Configuration.Json\1.0.0\lib\net451\Microsoft.Extensions.Configuration.Json.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.DependencyInjection\1.0.0\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.DependencyInjection.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.DependencyModel\1.0.0\lib\net451\Microsoft.Extensions.DependencyModel.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.FileProviders.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.FileProviders.Composite\1.0.0\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Composite.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.FileProviders.Physical\1.0.0\lib\net451\Microsoft.Extensions.FileProviders.Physical.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.FileSystemGlobbing\1.0.0\lib\net451\Microsoft.Extensions.FileSystemGlobbing.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Globalization.CultureInfoCache\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Globalization.CultureInfoCache.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Localization\1.0.0\lib\net451\Microsoft.Extensions.Localization.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Localization.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Localization.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging.Abstractions\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging.Console\1.0.0\lib\net451\Microsoft.Extensions.Logging.Console.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Logging.Debug\1.0.0\lib\net451\Microsoft.Extensions.Logging.Debug.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.ObjectPool\1.0.0\lib\net451\Microsoft.Extensions.ObjectPool.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Options\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Options.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Options.ConfigurationExtensions\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.PlatformAbstractions\1.0.0\lib\net451\Microsoft.Extensions.PlatformAbstractions.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.Primitives\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Extensions.WebEncoders\1.0.0\lib\netstandard1.0\Microsoft.Extensions.WebEncoders.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.IdentityModel.Logging\1.0.0\lib\net451\Microsoft.IdentityModel.Logging.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.IdentityModel.Protocols\2.0.0\lib\net451\Microsoft.IdentityModel.Protocols.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect\2.0.0\lib\net451\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.IdentityModel.Tokens\5.0.0\lib\net451\Microsoft.IdentityModel.Tokens.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.Net.Http.Headers\1.0.0\lib\netstandard1.1\Microsoft.Net.Http.Headers.dll
+--reference:C:\Users\Administrator\.nuget\packages\Microsoft.VisualStudio.Web.BrowserLink.Loader\14.0.0\lib\net451\Microsoft.VisualStudio.Web.BrowserLink.Loader.dll
+--reference:C:\Users\Administrator\.nuget\packages\Newtonsoft.Json\9.0.1\lib\net45\Newtonsoft.Json.dll
+--reference:C:\Users\Administrator\.nuget\packages\Remotion.Linq\2.1.1\lib\net45\Remotion.Linq.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.AppContext\4.1.0\ref\net46\System.AppContext.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Buffers\4.0.0\lib\netstandard1.1\System.Buffers.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Collections.Concurrent.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Collections.Immutable\1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ComponentModel.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.ComponentModel.Primitives\4.1.0\ref\net45\System.ComponentModel.Primitives.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.ComponentModel.TypeConverter\4.1.0\ref\net45\System.ComponentModel.TypeConverter.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Console\4.0.0\ref\net46\System.Console.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Contracts.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Debug.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Diagnostics.DiagnosticSource\4.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Diagnostics.Tools.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Dynamic.Runtime.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Globalization.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.IdentityModel.Tokens.Jwt\5.0.0\lib\net451\System.IdentityModel.Tokens.Jwt.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Interactive.Async\3.0.0\lib\net45\System.Interactive.Async.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.IO.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.IO.FileSystem\4.0.1\ref\net46\System.IO.FileSystem.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.IO.FileSystem.Primitives\4.0.1\ref\net46\System.IO.FileSystem.Primitives.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Expressions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Linq.Queryable.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Numerics.Vectors\4.1.1\ref\net46\System.Numerics.Vectors.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ObjectModel.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Extensions.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Reflection.Metadata\1.3.0\lib\portable-net45+win8\System.Reflection.Metadata.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Reflection.Primitives.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Resources.ResourceManager.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Extensions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Handles.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.InteropServices.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Runtime.InteropServices.RuntimeInformation\4.0.0\ref\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Runtime.Numerics.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Runtime.Serialization.Primitives\4.1.1\ref\net46\System.Runtime.Serialization.Primitives.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Security.Cryptography.Algorithms\4.2.0\ref\net461\System.Security.Cryptography.Algorithms.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Security.Cryptography.Encoding\4.0.0\ref\net46\System.Security.Cryptography.Encoding.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Security.Cryptography.Primitives\4.0.0\ref\net46\System.Security.Cryptography.Primitives.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Security.Cryptography.X509Certificates\4.1.0\ref\net461\System.Security.Cryptography.X509Certificates.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Text.Encoding.Extensions.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Text.Encodings.Web\4.0.0\lib\netstandard1.0\System.Text.Encodings.Web.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.dll
+--reference:C:\Users\Administrator\.nuget\packages\System.Threading.Tasks.Extensions\4.0.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Threading.Tasks.Parallel.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.ReaderWriter.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XDocument.dll
+--reference:C:\Users\Administrator\.nuget\packages\TinyMapper\2.0.8\lib\net45\TinyMapper.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\mscorlib.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Core.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Security.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Xml.Linq.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Configuration.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.ComponentModel.DataAnnotations.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Transactions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Numerics.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll
+--resource:"F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\obj\Release\net461\GUSLibrarydotnet-compile.deps.json",GUSLibrary.deps.json
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Program.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Startup.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Classes\CodeHelper.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Classes\CompanyIdHelper.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Classes\Constants.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Classes\CustomAuthAttribute.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Classes\EnumHelper.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Classes\FileUploadValidator.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Classes\JwtProvider.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Classes\SlugHelper.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\AccessoryCategoryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\AccessoryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\AccessoryTypeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\AccessoyProductNameController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ApplicationController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ApplicationUserController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\BrandController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\CodeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ColorController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\DepartmentController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\DivisionController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\EndBuyerController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\FabricController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\FabricProductTypeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\FabricsCategoryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\FabricsFibreContentController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\FabricsFinishingController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\FabricsProductNameController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\FabricsTypeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\FabricsYarnCountController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\FabricWeightController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\GraphicCategoryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\GraphicController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\GraphicProductNameController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\GraphicTypeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\NavigationController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\POMController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProductTypeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectAccessoryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectCollaboratorController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectColorController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectColorwayAccessoryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectColorwayEmbroideryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectColorwayFabricController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectColorwayPrintController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectEmbroideryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectFabricController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectImageGalleryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectPrintController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectViewingController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ProjectWashController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ReasonForAbortingProjectController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\RelAccessoryTypeCategoryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\SeasonController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ShippingController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\ShippingTypeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\SizeRangeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\SpecController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\UserRoleController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\VendorController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\VendorProductTypeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\VendorTypeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\WashCategoryController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\WashController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\WashProductNameController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\WashTypeController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Controllers\YearController.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\DbSeeder.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\GUSLibraryDbContext.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibAccessory\LibAccessory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibAccessoryCategory\LibAccessoryCategory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibAccessoryProductName\LibAccessoryProductName.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibAccessoryType\LibAccessoryType.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibApplication\LibApplication.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibBrand\LibBrand.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibCode\LibCode.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibColor\LibColor.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibDepartment\LibDepartment.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibDivision\LibDivision.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibEndBuyer\LibEndBuyer.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibFabric\LibFabric.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibFabricProductType\LibFabricProductType.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibFabricsCategory\LbFabricsCategory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibFabricsFibreContent\LibFabricsFibreContent.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibFabricsFinishing\LibFabricsFinishing.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibFabricsProductName\LibFabricsProductName.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibFabricsType\LibFabricsType.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibFabricsYarnCount\LibFabricsYarnCount.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibFabricWeight\LibFabricWeight.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibGraphic\LibGraphic.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibGraphicCategory\LibGraphicCategory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibGraphicProductName\LibGraphicProductName.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibGraphicType\LibGraphicType.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibPOM\LibPOM.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibProductType\LibProductType.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibReasonForAbortingProject\LibReasonForAbortingProject.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibSeason\LibSeason.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibShipping\LibShipping.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibShippingType\LibShippingType.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibSizeRange\LibSizeRange.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibSpec\LibSpec.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibUser\ApplicationUser.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibUser\UserMatrix.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibUser\UserRole.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibVendor\Vendor.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibVendor\VendorBankAccount.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibVendor\VendorContact.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibVendor\VendorProduct.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibVendor\VendorProductType.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibVendor\VendorType.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibWash\LibWash.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibWashCategory\LibWashCategory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibWashProductName\LibWashProductName.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibWashType\LibWashType.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\LibYear\LibYear.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProAccessory\ProAccessory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProCollaborator\ProCollaborator.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProColor\ProColor.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProColorwayAccessory\ProColorwayAccessory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProColorwayEmbroidery\ProColorwayEmbroidery.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProColorwayFabric\ProColorwayFabric.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProColorwayPrint\ProColorwayPrint.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProEmbroidery\ProEmbroidery.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProFabric\ProFabric.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProImageGallery\ProImageGallery.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProPrint\ProPrint.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProProject\ProProject.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProProjectViewing\ProProjectViewing.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\ProWash\ProWash.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\RelAccCategoryProductName\RelAccCategoryProductName.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\RelAccessoryTypeCategory\RelAccessoryTypeCategory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\RelFabricsCategoryProductName\RelFabricsCategoryProductName.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\RelFabricsTypeCategory\RelFabricsTypeCategory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\RelGraphicCategoryProductName\RelGraphicCategoryProductName.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\RelGraphicTypeCategory\RelGraphicTypeCategory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\RelSpecPOM\RelSpecPOM.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\RelWashCategoryProductName\RelFabricsCategoryProductName.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\RelWashTypeCategory\RelWashTypeCategory.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\Data\SpecChild\LibSpecChild.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AccessoryCategoryListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AccessoryCategoryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AccessoryFilterModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AccessoryListItemViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AccessoryListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AccessoryProductNameListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AccessoryProductNameViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AccessoryTypeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AccessoryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AcessoryTypeListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\AncestorMenuItem.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ApplicationUserViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ApplicationViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\BrandListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\BrandViewModel .cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\CodeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ColorListItemViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ColorListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ColorSearchFilterViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ColorViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\DepartmentListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\DepartmentViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\DivisionListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\DivisionViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\EndBuyerListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\EndBuyerViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricListItemViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricProductTypeListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricProductTypeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsCategoryListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsCategoryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsFibreContentListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsFibreContentViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsFilterModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsFinishingListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsFinishingViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsProductNameListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsProductNameViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsTypeListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsTypeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsYarnCountListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricsYarnCountViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricWeightListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\FabricWeightViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicCategoryListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicCategoryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicFilterModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicListItemViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicProductNameListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicProductNameViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicTypeListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicTypeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\GraphicViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ImageDataViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ImageListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\MenuItem.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\Pagination.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ParentMenuItem.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\POMListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\POMofSpecViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\POMViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProductNameViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProductTypeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectAccessoryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectCollaboratorViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectColorViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectColorwayAccessoryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectColorwayEmbroideryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectColorwayFabricViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectColorwayPrintViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectEmbroideryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectFabricViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectImageGalleryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectPrintViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectSearchGeneralFilterViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectViewingViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ProjectWashViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ReasonForAbortingProjectListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ReasonForAbortingProjectViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\RelAccessoryTypeCategoryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\RelFabricCategoryDescViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\RelSpecPOMViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SearchFilterProjectViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SearchGeneralFilterViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SeasonListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SeasonViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ShippingListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ShippingTypeListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ShippingTypeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\ShippingViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SizeRangeListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SizeRangeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SpecDetailViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SpecListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SpecUpdateViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\SpecViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\UserMatrixViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\UserRoleViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\VendorBankAccountViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\VendorContactViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\VendorProductTypeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\VendorProductViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\VendorTypeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\VendorViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashCategoryListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashCategoryViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashDescViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashFilterModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashListItemViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashProductNameListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashProductNameViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashTypeListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashTypeViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\WashViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\YearListViewModel.cs
+F:\Visual WorkSpace\GUS\Github21\GUS\src\GUSLibrary\ViewModels\YearViewModel.cs

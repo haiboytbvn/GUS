@@ -1,0 +1,143 @@
+<div class="library-header">
+    <h3 class="nomargin"><span class="nomargin nocolor">Material Library / Acessories </span>Edit</h3>
+</div>
+<div class="library-content-container">
+    <div class="col_half nobottommargin" *ngIf="data">
+        <div class="thumbnail-placeholder">
+            <img src="{{this.data.Images[0]}}" alt="" id="imgPreview">
+        </div>
+        <ul class="thumbnail-image">
+            <li *ngFor="let image of data.Images"><a href="javascript:void(0);" (click)="changeImage(image)"><img src="{{image}}" alt=""/></a></li>
+            
+        </ul>
+    </div>
+    <div class="col_half col_last nobottommargin">
+        <form class="form-user" #accessoriesForm="ngForm" *ngIf="data">
+            <input type="hidden" value="{{this.data.Image}}" id="hdImagepath" />
+            <table class="tableAddMaterial">
+                <tbody>
+                    <tr>
+                        <td>Accessory Code</td>
+                        <td>{{this.data.Code}}</td>
+                    </tr>
+                    <tr>
+                        <td>Buyer Accessory Code</td>
+                        <td><input name="input-buyercode" type="text" class="form-control" placeholder="Enter buyer code" [(ngModel)]="data.BuyerCode" #buyercode="ngModel" autofocus required (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting"/> </td>
+                    </tr>
+                    <tr>
+                        <td>Accessory Type</td>
+                        <td>
+                            <select name="input-acctype" class="form-control" [(ngModel)]="data.AccType" #acctype="ngModel" (ngModelChange)="isFormChanged($event)" (change)="changeType(acctype.value)" [disabled]="!this.iseditting">
+                                <option *ngFor="let type of types" value="{{type.Id}}">{{type.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Acessory Category</td>
+                        <td>
+                            <select name="input-acccategory" class="form-control" [(ngModel)]="data.AccCategory" #acccategory="ngModel" (ngModelChange)="isFormChanged($event)" (change)="changeCategory(acccategory.value)" [disabled]="!this.iseditting">
+                                <option *ngFor="let cate of categories" value="{{cate.Id}}">{{cate.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>
+                            <select name="input-productname" class="form-control" [(ngModel)]="data.AccProductName" #productname="ngModel" (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting">
+                                <option *ngFor="let pn of productnames" value="{{pn.Id}}">{{pn.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td><input name="input-description" type="text" class="form-control" placeholder="Enter description" [(ngModel)]="data.Description" #description="ngModel" autofocus required (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting"/></td>
+                    </tr>
+                    <tr>
+                        <td>Brand</td>
+                        <td>
+                            <select name="input-brand" class="form-control" [(ngModel)]="data.Brand" #brand="ngModel" (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting">
+                                <option *ngFor="let brand of brands" value="{{brand.Id}}">{{brand.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Department</td>
+                        <td>
+                            <select name="input-department" class="form-control" [(ngModel)]="data.Department" #department="ngModel" (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting">
+                                <option *ngFor="let dept of departments" value="{{dept.Id}}">{{dept.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Division</td>
+                        <td>
+                            <select name="input-division" class="form-control" [(ngModel)]="data.Division" #division="ngModel" (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting">
+                                <option *ngFor="let division of divisions" value="{{division.Id}}">{{division.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Item Size
+                        </td>
+                        <td>
+                            <input name="input-itemsize" type="text" class="form-control" placeholder="Enter itemsize" [(ngModel)]="data.ItemSize" #itemsize="ngModel" autofocus required (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Color</td>
+                        <td>
+                            <select name="input-color" class="form-control" [(ngModel)]="data.Color" #color="ngModel" (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting">
+                                <option *ngFor="let color of colors" value="{{color.Id}}">{{color.Name}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Supplier</td>
+                        <td><input name="input-supplier" type="text" class="form-control" placeholder="Enter supplier" [(ngModel)]="data.Supplier" #supplier="ngModel" autofocus required (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting" /></td>
+                    </tr>
+                    <tr>
+                        <td>Supplier ref code</td>
+                        <td><input name="input-suppliercode" type="text" class="form-control" placeholder="Enter suplier code" [(ngModel)]="data.SupplierCode" #suppliercode="ngModel" autofocus required (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting" /></td>
+                    </tr>
+                    <tr>
+                        <td>Remark</td>
+                        <td><textarea name="input-remark" cols="" rows="" class="form-control" placeholder="Enter remark" [(ngModel)]="data.Remark" #remark="ngModel" autofocus required (ngModelChange)="isFormChanged($event)" [disabled]="!this.iseditting"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <input type="button" value="{{this.buttonvalue}}" class="button button-small button-red leftmargin-md notopmargin nobottommargin fright"  (click)="onUpdate(data)">
+            <input type="file" id="files" name="files" style="opacity:0" (change)="fileChangeEvent()" multiple />
+        </form>
+    </div>
+
+    <div class="clear"></div>
+    <div class="col_full usage-history">
+        <h2>Usage History</h2>
+        <table class="usageTable">
+            <thead>
+                <tr>
+                    <th class="sorting">Date</th>
+                    <th class="sorting">Initiator</th>
+                    <th class="sorting">Project</th>
+                    <th class="sorting">View</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12/12/2018</td>
+                    <td>Mark Fred</td>
+                    <td>FA17KT394</td>
+                    <td><a href="#">Project</a>&nbsp;&nbsp;&nbsp;<a href="#">Chat</a></td>
+                </tr>
+                <tr>
+                    <td>07/09/2018</td>
+                    <td>James Houston</td>
+                    <td>FA47KT424</td>
+                    <td><a href="#">Project</a>&nbsp;&nbsp;&nbsp;<a href="#">Chat</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

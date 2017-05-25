@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <title>GUS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="css/radio-checkbox.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Document Title
+    ============================================= -->
+
+    <!-- Step 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="js/shim.min.js"></script>
+    <script src="js/zone.js"></script>
+    <script src="js/Reflect.js"></script>
+    <script src="js/system.src.js"></script>
+
+    <!-- Angular2 Native Directives -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <!--<script src="/js/ng2-bootstrap.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment.js"></script>
+
+    
+
+
+    <!-- Step 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+    </script>
+</head>
+<!-- Step 3. Display the application -->
+<body class="stretched">
+    <!-- Document Wrapper
+      ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        <!-- Header
+        ============================================= -->
+        <header id="header" class="static-sticky sticky-header">
+
+            <div id="header-wrap">
+
+                <div class="container-fullwidth clearfix">
+
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                    <!-- Logo
+                    ============================================= -->
+                    <div id="logo">
+                        <a href="dashboard.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Sourced Global"></a>
+                        <a href="dashboard.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Sourced Global"></a>
+                    </div><!-- #logo end -->
+
+                    <div id="top-account" class="dropdown">
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="icon-user"></i> John Lemon <i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Messages <span class="badge">5</span></a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Logout <i class="icon-signout"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu">
+
+                        <ul>
+                            <li><a href="#"><div>Project</div></a></li>
+                            <li><a href="#"><div>Library</div></a></li>
+                            <li><a href="#"><div>User</div></a></li>
+                            <li><a href="#"><div>Vendor/Supplier</div></a></li>
+                        </ul>
+
+                    </nav><!-- #primary-menu end -->
+
+                </div>
+
+            </div>
+
+        </header><!-- #header end -->
+        <!-- Content
+        ============================================= -->
+        <section id="content" class="library">
+
+            <div class="content-wrap">
+                <gus>
+                </gus>
+            </div>
+
+        </section><!-- #content end -->
+        <!-- Footer
+        ============================================= -->
+        <footer id="footer" class="dark">
+
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights">
+
+                <div class="container-fullwidth clearfix">
+
+                    <div class="col_half">
+                        Copyrights &copy; 2016 All Rights Reserved by Sourced.Global<br>
+                        <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+                    </div>
+
+                    <div class="col_half col_last tright">
+                        <div class="fright clearfix">
+                            <a href="#" class="social-icon si-small si-borderless si-facebook">
+                                <i class="icon-facebook"></i>
+                                <i class="icon-facebook"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-twitter">
+                                <i class="icon-twitter"></i>
+                                <i class="icon-twitter"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-gplus">
+                                <i class="icon-gplus"></i>
+                                <i class="icon-gplus"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-pinterest">
+                                <i class="icon-pinterest"></i>
+                                <i class="icon-pinterest"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-vimeo">
+                                <i class="icon-vimeo"></i>
+                                <i class="icon-vimeo"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-github">
+                                <i class="icon-github"></i>
+                                <i class="icon-github"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-yahoo">
+                                <i class="icon-yahoo"></i>
+                                <i class="icon-yahoo"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-linkedin">
+                                <i class="icon-linkedin"></i>
+                                <i class="icon-linkedin"></i>
+                            </a>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <i class="icon-envelope2"></i> info@sourced.global <span class="middot">&middot;</span> <i class="icon-headphones"></i> +65 6558 1346 <span class="middot">&middot;</span> <i class="icon-skype2"></i> Sourced.Global
+                    </div>
+
+                </div>
+
+            </div><!-- #copyrights end -->
+
+        </footer><!-- #footer end -->
+       
+    </div><!-- #wrapper end -->
+
+
+   <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-97466136-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

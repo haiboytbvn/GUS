@@ -1,0 +1,2 @@
+System.register([],function(exports_1,context_1){"use strict";var AccessoryTypeListModel;context_1&&context_1.id;return{setters:[],execute:function(){AccessoryTypeListModel=function(){function AccessoryTypeListModel(Data,Paging){this.Data=Data,this.Paging=Paging}return AccessoryTypeListModel}(),exports_1("AccessoryTypeListModel",AccessoryTypeListModel)}}});
+//# sourceMappingURL=accessorytype-list.model.js.map
