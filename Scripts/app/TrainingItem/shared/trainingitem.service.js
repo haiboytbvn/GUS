@@ -39,6 +39,12 @@ System.register(["@angular/core", "@angular/http", "rxjs/Observable", "../../aut
                         .map(function (response) { return response.json(); })
                         .catch(this.handleError);
                 };
+                TrainingItemService.prototype.getTrainingItemListForModal = function (data) {
+                    var url = this.baseUrl + "GetTrainingItemListForModal";
+                    return this.http.post(url, JSON.stringify(data), this.getRequestOptions())
+                        .map(function (response) { return response.json(); })
+                        .catch(this.handleError);
+                };
                 // calls the [POST] /api/items/ Web API method to add a new item.
                 TrainingItemService.prototype.add = function (data) {
                     console.log(data);

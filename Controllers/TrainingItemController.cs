@@ -82,6 +82,22 @@ namespace GUSLibrary.Controllers
         }
 
 
+        //Get list item for modal
+        [HttpPost("GetTrainingItemListForModal")]
+        public IActionResult GetTrainingItemListForModal()
+        {
+            var itemList = DbContext.TrainingItems.Where(z => z.IsLatest && !(z.IsDeleted) && z.IsActive).ToList().OrderBy(x => x.Value);
+            var result = new List<TrainingItemViewModel>();
+            foreach (var item in itemList)
+            {
+                var trainingitem = TinyMapper.Map<TrainingItemViewModel>(item);
+                result.Add(trainingitem);
+            }
+            return new JsonResult(result, DefaultJsonSettings);
+        }
+
+        
+
         // GET by Id
         [HttpGet("GetTrainingItemById/{id}")]
         public IActionResult GetTrainingItemById(Guid id)

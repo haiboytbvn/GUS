@@ -12,12 +12,14 @@ import { Brand } from "../../Brand/shared/brand.model";
 import { BrandService } from "../../Brand/shared/brand.service";
 import { TrainingItem } from "../../TrainingItem/shared/trainingitem.model";
 import { TrainingItemService } from "../../TrainingItem/shared/trainingitem.service";
+import { RelTrainingTrainingItem } from "../../RelTrainingTrainingItem/shared/reltrainingtrainingitem.model";
+import { RelTrainingTrainingItemService } from "../../RelTrainingTrainingItem/shared/reltrainingtrainingitem.service";
 declare var jQuery: any;
 
 @Component({
     selector: 'training',
     templateUrl: 'app/Training/training-list/training-list.component.html',
-    providers: [TrainingService, FormBuilder, BrandService, TrainingItemService]
+    providers: [TrainingService, FormBuilder, BrandService, TrainingItemService, RelTrainingTrainingItemService]
 })
 
 export class TrainingListComponent {
@@ -37,7 +39,9 @@ export class TrainingListComponent {
     trainingEditForm: FormGroup;
     brands: Brand[];
     trainingitems: TrainingItem[];
-
+    reltrainingtrainingitems: RelTrainingTrainingItem[];
+    items: string[];
+    trainingItems: string[];
     constructor(
         private trainingService: TrainingService,
         private authService: AuthService,
@@ -45,7 +49,8 @@ export class TrainingListComponent {
         private fb: FormBuilder,
         private acctypeService: TrainingService,
         private brandService: BrandService,
-        private trainingItemService: TrainingItemService
+        private trainingItemService: TrainingItemService,
+        private relTrainingTrainingTtemService: RelTrainingTrainingItemService
     ) {
     }
 
@@ -53,6 +58,8 @@ export class TrainingListComponent {
         if (!this.authService.isLoggedIn()) {
             this.router.navigate([""]);
         }
+        this.items = [];
+        this.trainingItems = [];
         this.paging = new PaginationModel(10, 1, "Name", 0, [], 0);
         this.searchModel = new GeneralSearchModel("", "", "", "", this.paging);
         this.trainingService.getTrainingList(this.searchModel).subscribe(items => this.ACdata = items, error => this.errorMessage = <any>error);
@@ -62,11 +69,13 @@ export class TrainingListComponent {
                 id: [""],
                 name: ["", [Validators.required]],
                 age: ["", [Validators.required]],
-                isactive: [true]
+                isactive: [true],
+                isselected: [false]
             }
         );
-        this.data = new Training("", false, "", "");
+        this.data = new Training("", false, "", "",[]);
         this.itemid = "";
+        this.reltrainingtrainingitems = new Array<RelTrainingTrainingItem>();
     }
     changePage(i: number) {
         this.searchModel.Paging.PageNumber = i;
@@ -85,17 +94,21 @@ export class TrainingListComponent {
     }
 
     onSubmit(data: any) {
-        console.log(data);
-        var training = new Training("", data.isactive, data.name, data.age);
+     // get items id arry
+       
+        
+
+        var training = new Training("", data.isactive, data.name, data.age, this.trainingItems);
         this.trainingService.add(training).subscribe((data) => {
             if (data.error == null) {
-
-
+                       
                 this.trainingService.getTrainingList(this.searchModel).subscribe(items => this.ACdata = items, error => this.errorMessage = <any>error);
                 alert("added successfully");
-                this.data = new Training("", false, "", "");
+                
+                this.data = new Training("", false, "", "",[]);
                 jQuery('#txtName').val('');
                 jQuery('#ckIsActive').prop('checked', true);
+                
             } else {
                 // update failure
                 this.errorMessage = data.error;
@@ -114,14 +127,15 @@ export class TrainingListComponent {
     }
     onAdd() {
         jQuery('#txtName').val('');
+        jQuery('#txtAge').val('');
         jQuery('#ckIsActive').prop('checked', true);
-        this.trainingItemService.getTrainingItemList(this.searchModel).subscribe(items => this.trainingitems = items.Data, error => this.errorMessage = <any>error);
+        this.trainingItemService.getTrainingItemListForModal(this.searchModel).subscribe(items => this.trainingitems = items, error => this.errorMessage = <any>error);
+        this.trainingItems = [];
     }
     onUpdate(data: any) {
-        // else, update it
-        // var training = new Training(data.id, null, null, data.isactive, data.name, false, data.buyercode, data.acctype);
-        console.log(data);
-        this.trainingService.update(data).subscribe((data) => {
+        
+        this.data.Items = this.trainingItems;
+        this.trainingService.update(this.data).subscribe((data) => {
             if (data.error == null) {
                 this.data = data;
                 this.trainingService.getTrainingList(this.searchModel).subscribe(items => this.ACdata = items, error => this.errorMessage = <any>error);
@@ -142,19 +156,63 @@ export class TrainingListComponent {
         );
     }
     onEdit(id: string) {
+        // get training item ids and save into trainingItems array
+
+        this.trainingItems = [];
         this.itemid = id;
         if (id !== "") {
             this.trainingService.get(id).subscribe((data) => {
                 this.data = data;
+                for (var i = 0; i < data.Items.length; i++) {
+                    this.trainingItems.push(data.Items[i]);
+                }
             });
-            this.trainingItemService.getTrainingItemList(this.searchModel).subscribe(items => this.trainingitems = items.Data, error => this.errorMessage = <any>error);
-
+            this.trainingItemService.getTrainingItemListForModal(this.searchModel).subscribe(items => this.trainingitems = items, error => this.errorMessage = <any>error);
+            console.log(this.data.Items);
+            //for (var j = 0; j < this.data.Items.length; j++){
+            //    this.isCheck(this.data.Items[j]);
+            //}
         }
+       
     }
+
+
+    IsIntheList(id: string) {
+        for (var i = 0; i < this.trainingItems.length; i++) {
+            if (this.trainingItems[i] === id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //isCheck(item: string) {
+    //    for (var i = 0; i < this.trainingitems.length; i++) {
+    //        if (item == this.trainingitems[i].Id) {
+    //            (jQuery('#chkItem-' + i).attr("checked", "checked"));
+    //            break;
+    //        }
+    //    }
+    //}
+
     isFormChanged(value) {
         this.trainingService.get(this.data.Id).subscribe((oldData) => {
             this.isFormDataChanged(oldData);
         });
+    }
+    onChangeItem(e: any, id: string) {
+        this.isFormValuesChanged = true;
+        if (e.target.checked) {
+            this.trainingItems.push(id);
+            console.log(this.trainingItems);
+        }
+        else {
+            for (var i = 0; i < this.trainingItems.length; i++) {
+                if (this.trainingItems[i] === id) {
+                    this.trainingItems.splice(i, 1);
+                }
+            }
+        }
     }
 
     isFormDataChanged(oldData: Training) {
@@ -163,4 +221,17 @@ export class TrainingListComponent {
         else
             this.isFormValuesChanged = true;
     }
+    changeItemSelect(value:any) {
+        console.log(value);
+    }
+
+    onChange(k: number) {
+        if (jQuery('#chkItem-' + k).prop('checked')) {
+            jQuery('#chkItem-' + k).prop('checked', false);
+        }
+        else {
+            jQuery('#chkItem-' + k).prop('checked', true);
+        }
+    }
 }
+

@@ -87,9 +87,19 @@ namespace GUSLibrary.Controllers
         public IActionResult GetTrainingById(Guid id)
         {
             var item = DbContext.Trainings.FirstOrDefault(x => x.Id == id);
-            if (item != null) return new JsonResult(TinyMapper.Map<TrainingViewModel>(item), DefaultJsonSettings);
+            var result = TinyMapper.Map<TrainingViewModel>(item);
+            result.Items = new List<Guid>();
+            var trainingItems = DbContext.RelTrainingTrainingItems.Where(z => (z.TrainingId == id) && z.IsLatest && !(z.IsDeleted) && z.IsActive).ToList();
+            foreach (var training in trainingItems)
+            {
+                result.Items.Add(training.TrainingItemId);
+            }
+            if (item != null) return new JsonResult(result, DefaultJsonSettings);
+
             return NotFound( new { Error = $"ID {id} has not been found" });
         }
+
+       
 
         // POST api/values
         [HttpPost("AddTraining")]
@@ -99,7 +109,7 @@ namespace GUSLibrary.Controllers
                 return NotFound(new { error = "Invalid Data" });
             // return a HTTP Status 404 (Not Found) if we couldn't find a suitable item.
 
-            var trainingtoupdate = new LibTraining()
+            var trainingitemtoadd = new LibTraining()
             {
                 Id = Guid.NewGuid(),
                 DateCreated = DateTime.Now,
@@ -112,13 +122,27 @@ namespace GUSLibrary.Controllers
                 IsDeleted = false
             };
 
-            DbContext.Trainings.Add(trainingtoupdate);
+            DbContext.Trainings.Add(trainingitemtoadd);
+
+            //TODO: Update relation talbe
+              
+            foreach(var item in data.Items)
+            {
+                var rel = new RelTrainingTrainingItem()
+                {
+                    Id = Guid.NewGuid(),
+                    TrainingId = trainingitemtoadd.Id,
+                    TrainingItemId = item,
+                    IsActive = true,
+                    IsDeleted = false,
+                    IsLatest = true,
+                    DateCreated = DateTime.Today.Date
+                };
+                DbContext.RelTrainingTrainingItems.Add(rel);
+            }
 
             // persist the changes into the Database.
             DbContext.SaveChanges();
-
-            // set new id to data object
-            data.Id = trainingtoupdate.Id;
 
             return new JsonResult(data, DefaultJsonSettings);
         }
@@ -146,6 +170,7 @@ namespace GUSLibrary.Controllers
                         Version = trainingtoupdate.Version,
                         IsLatest = false,
                         IsDeleted = trainingtoupdate.IsDeleted
+                        
                     };
                     DbContext.Trainings.Add(training);
 
@@ -158,6 +183,29 @@ namespace GUSLibrary.Controllers
                     trainingtoupdate.IsLatest = true;
                     trainingtoupdate.Version = trainingtoupdate.Version + 1;
                     DbContext.Trainings.Update(trainingtoupdate);
+
+                    //update in relation table
+                    var olddatas = DbContext.RelTrainingTrainingItems.Where(x => x.TrainingId == data.Id).ToList();
+                    foreach(var olddata in olddatas)
+                    {
+                        olddata.IsDeleted = true;
+                        olddata.IsLatest = false;
+                    }
+
+                    foreach (var item in data.Items)
+                    {
+                        var rel = new RelTrainingTrainingItem()
+                        {
+                            Id = Guid.NewGuid(),
+                            TrainingId = trainingtoupdate.Id,
+                            TrainingItemId = item,
+                            IsActive = true,
+                            IsDeleted = false,
+                            IsLatest = true,
+                            DateCreated = DateTime.Today.Date
+                        };
+                        DbContext.RelTrainingTrainingItems.Add(rel);
+                    }
 
                     // persist the changes into the Database.
                     DbContext.SaveChanges();

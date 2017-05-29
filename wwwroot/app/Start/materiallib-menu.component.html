@@ -1,0 +1,86 @@
+<input id="group-2" type="checkbox" hidden />
+<label for="group-2">Material Library</label>
+<ul class="group-list" *ngIf="this.generallibMenu">
+    <li (click)="topFunction()"><a [routerLink]="['color']">Color</a></li>
+    <li *ngFor="let ftype of fabgenerallibMenu; let i=index ">
+        <input attr.id="sub-group-{{ftype.Value}}" type="checkbox" hidden />
+        <label attr.for="sub-group-{{ftype.Value}}" (click)="changefabType(ftype.Value)"><i class="icon-play"></i>{{ftype.Text}}</label>
+        <ul class="sub-group-list">
+            <li *ngFor="let fcate of ftype.Items; let k=index">
+                <input attr.id="sub-sub-group-{{fcate.Value}}" type="checkbox" hidden />
+                <label attr.for="sub-sub-group-{{fcate.Value}}" (click)="changefabCate(fcate.Value)"><i class="icon-play"></i>{{fcate.Text}}</label>
+                <ul class="sub-sub-group-list">
+                    <li (click)="topFunction()" *ngFor="let fpn of fcate.Items">
+                        <a href="fabrics/productname/{{fpn.Value}}">
+                            {{fpn.Text}}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </li>
+    <!--======================================-->
+
+    <li *ngFor="let type of generallibMenu; let i=index ">
+        <input attr.id="sub-group-{{type.Value}}" type="checkbox" hidden/>
+        <label attr.for="sub-group-{{type.Value}}" (click)="changeType(type.Value)"><i class="icon-play"></i>{{type.Text}}</label>
+        <ul class="sub-group-list">
+            <li *ngFor="let cate of type.Items; let k=index">
+                <input attr.id="sub-sub-group-{{cate.Value}}" type="checkbox" hidden/>
+                <label attr.for="sub-sub-group-{{cate.Value}}" (click)="changeCate(cate.Value)"><i class="icon-play"></i>{{cate.Text}}</label>
+                <ul class="sub-sub-group-list">
+                    <li (click)="topFunction()" *ngFor="let pn of cate.Items">
+                        <a href="accessory/productname/{{pn.Value}}">
+                            {{pn.Text}}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </li>
+
+    <li *ngFor="let wtype of washgenerallibMenu; let i=index ">
+        <input attr.id="sub-group-{{wtype.Value}}" type="checkbox" hidden/>
+        <label attr.for="sub-group-{{wtype.Value}}" (click)="changewashType(wtype.Value)"><i class="icon-play"></i>{{wtype.Text}}</label>
+        <ul class="sub-group-list">
+            <li *ngFor="let wcate of wtype.Items; let k=index">
+                <input attr.id="sub-sub-group-{{wcate.Value}}" type="checkbox" hidden/>
+                <label attr.for="sub-sub-group-{{wcate.Value}}" (click)="changewashCate(wcate.Value)"><i class="icon-play"></i>{{wcate.Text}}</label>
+                <ul class="sub-sub-group-list">
+                    <li (click)="topFunction()" *ngFor="let wpn of wcate.Items">
+                        <a href="wash/productname/{{wpn.Value}}">
+                            {{wpn.Text}}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </li>
+
+    <li *ngFor="let gtype of graphicgenerallibMenu">
+        <input attr.id="sub-group-{{gtype?.Value}}" type="checkbox" hidden />
+        <label attr.for="sub-group-{{gtype?.Value}}" (click)="changegraphicType(gtype?.Value)"><i class="icon-play"></i>{{gtype?.Text}}</label>
+        <ul class="sub-group-list">
+            <li *ngFor="let gcate of gtype?.Items">
+                <input attr.id="sub-sub-group-{{gcate?.Value}}" type="checkbox" hidden />
+                <label attr.for="sub-sub-group-{{gcate?.Value}}" (click)="changegraphicCate(gcate?.Value)"><i class="icon-play"></i>{{gcate?.Text}}</label>
+                <ul class="sub-sub-group-list">
+                    <li (click)="topFunction()" *ngFor="let gpn of gcate?.Items">
+                        <a href="graphic/productname/{{gpn?.Value}}">
+                            {{gpn.Text}}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </li>
+    <!--======================================-->
+    <!--<li (click)="topFunction()"><a [routerLink]="['spec']">Spec Template</a></li>-->
+    <li (click)="topFunction()"><a [routerLink]="['']">TNA Template</a></li>
+    <!--<li (click)="topFunction()"><a [routerLink]="['graphic']">Graphic</a></li>-->
+    <li (click)="topFunction()"><a [routerLink]="['shipping']">Shipping</a></li>
+</ul>

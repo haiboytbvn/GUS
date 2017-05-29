@@ -26,6 +26,7 @@ namespace GUSLibrary.ViewModels
         public int Version { get; set; }
         public bool IsLatest { get; set; }
         public bool IsDeleted { get; set; }
+        public List<Guid> Items { get; set; }
         #endregion
     }
 }

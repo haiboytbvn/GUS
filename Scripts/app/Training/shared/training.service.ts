@@ -21,6 +21,7 @@ export class TrainingService {
             .catch(this.handleError);
     }
 
+
     // calls the [POST] /api/items/ Web API method to add a new item.
     add(data: Training) {
         console.log(data);

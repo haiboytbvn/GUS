@@ -1,4 +1,4 @@
-System.register(["@angular/core", "@angular/forms", "../shared/training.service", "../shared/training.model", "../../Pagination/shared/pagination.model", "../../Pagination/shared/generalsearch.model", "@angular/router", "../../auth.service", "../../Brand/shared/brand.service", "../../TrainingItem/shared/trainingitem.service"], function (exports_1, context_1) {
+System.register(["@angular/core", "@angular/forms", "../shared/training.service", "../shared/training.model", "../../Pagination/shared/pagination.model", "../../Pagination/shared/generalsearch.model", "@angular/router", "../../auth.service", "../../Brand/shared/brand.service", "../../TrainingItem/shared/trainingitem.service", "../../RelTrainingTrainingItem/shared/reltrainingtrainingitem.service"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10,7 +10,7 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, forms_1, training_service_1, training_model_1, pagination_model_1, generalsearch_model_1, router_1, auth_service_1, brand_service_1, trainingitem_service_1, TrainingListComponent;
+    var core_1, forms_1, training_service_1, training_model_1, pagination_model_1, generalsearch_model_1, router_1, auth_service_1, brand_service_1, trainingitem_service_1, reltrainingtrainingitem_service_1, TrainingListComponent;
     return {
         setters: [
             function (core_1_1) {
@@ -42,11 +42,14 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
             },
             function (trainingitem_service_1_1) {
                 trainingitem_service_1 = trainingitem_service_1_1;
+            },
+            function (reltrainingtrainingitem_service_1_1) {
+                reltrainingtrainingitem_service_1 = reltrainingtrainingitem_service_1_1;
             }
         ],
         execute: function () {
             TrainingListComponent = (function () {
-                function TrainingListComponent(trainingService, authService, router, fb, acctypeService, brandService, trainingItemService) {
+                function TrainingListComponent(trainingService, authService, router, fb, acctypeService, brandService, trainingItemService, relTrainingTrainingTtemService) {
                     this.trainingService = trainingService;
                     this.authService = authService;
                     this.router = router;
@@ -54,6 +57,7 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                     this.acctypeService = acctypeService;
                     this.brandService = brandService;
                     this.trainingItemService = trainingItemService;
+                    this.relTrainingTrainingTtemService = relTrainingTrainingTtemService;
                     this.title = "Training";
                     this.pagesizearr = [10, 20, 30, 0];
                     this.isFormValuesChanged = false;
@@ -63,6 +67,8 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                     if (!this.authService.isLoggedIn()) {
                         this.router.navigate([""]);
                     }
+                    this.items = [];
+                    this.trainingItems = [];
                     this.paging = new pagination_model_1.PaginationModel(10, 1, "Name", 0, [], 0);
                     this.searchModel = new generalsearch_model_1.GeneralSearchModel("", "", "", "", this.paging);
                     this.trainingService.getTrainingList(this.searchModel).subscribe(function (items) { return _this.ACdata = items; }, function (error) { return _this.errorMessage = error; });
@@ -71,10 +77,12 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                         id: [""],
                         name: ["", [forms_1.Validators.required]],
                         age: ["", [forms_1.Validators.required]],
-                        isactive: [true]
+                        isactive: [true],
+                        isselected: [false]
                     });
-                    this.data = new training_model_1.Training("", false, "", "");
+                    this.data = new training_model_1.Training("", false, "", "", []);
                     this.itemid = "";
+                    this.reltrainingtrainingitems = new Array();
                 };
                 TrainingListComponent.prototype.changePage = function (i) {
                     var _this = this;
@@ -93,14 +101,14 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                     this.trainingService.getTrainingList(this.searchModel).subscribe(function (items) { return _this.ACdata = items; }, function (error) { return _this.errorMessage = error; });
                 };
                 TrainingListComponent.prototype.onSubmit = function (data) {
+                    // get items id arry
                     var _this = this;
-                    console.log(data);
-                    var training = new training_model_1.Training("", data.isactive, data.name, data.age);
+                    var training = new training_model_1.Training("", data.isactive, data.name, data.age, this.trainingItems);
                     this.trainingService.add(training).subscribe(function (data) {
                         if (data.error == null) {
                             _this.trainingService.getTrainingList(_this.searchModel).subscribe(function (items) { return _this.ACdata = items; }, function (error) { return _this.errorMessage = error; });
                             alert("added successfully");
-                            _this.data = new training_model_1.Training("", false, "", "");
+                            _this.data = new training_model_1.Training("", false, "", "", []);
                             jQuery('#txtName').val('');
                             jQuery('#ckIsActive').prop('checked', true);
                         }
@@ -118,15 +126,15 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                 TrainingListComponent.prototype.onAdd = function () {
                     var _this = this;
                     jQuery('#txtName').val('');
+                    jQuery('#txtAge').val('');
                     jQuery('#ckIsActive').prop('checked', true);
-                    this.trainingItemService.getTrainingItemList(this.searchModel).subscribe(function (items) { return _this.trainingitems = items.Data; }, function (error) { return _this.errorMessage = error; });
+                    this.trainingItemService.getTrainingItemListForModal(this.searchModel).subscribe(function (items) { return _this.trainingitems = items; }, function (error) { return _this.errorMessage = error; });
+                    this.trainingItems = [];
                 };
                 TrainingListComponent.prototype.onUpdate = function (data) {
                     var _this = this;
-                    // else, update it
-                    // var training = new Training(data.id, null, null, data.isactive, data.name, false, data.buyercode, data.acctype);
-                    console.log(data);
-                    this.trainingService.update(data).subscribe(function (data) {
+                    this.data.Items = this.trainingItems;
+                    this.trainingService.update(this.data).subscribe(function (data) {
                         if (data.error == null) {
                             _this.data = data;
                             _this.trainingService.getTrainingList(_this.searchModel).subscribe(function (items) { return _this.ACdata = items; }, function (error) { return _this.errorMessage = error; });
@@ -145,20 +153,59 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                     });
                 };
                 TrainingListComponent.prototype.onEdit = function (id) {
+                    // get training item ids and save into trainingItems array
                     var _this = this;
+                    this.trainingItems = [];
                     this.itemid = id;
                     if (id !== "") {
                         this.trainingService.get(id).subscribe(function (data) {
                             _this.data = data;
+                            for (var i = 0; i < data.Items.length; i++) {
+                                _this.trainingItems.push(data.Items[i]);
+                            }
                         });
-                        this.trainingItemService.getTrainingItemList(this.searchModel).subscribe(function (items) { return _this.trainingitems = items.Data; }, function (error) { return _this.errorMessage = error; });
+                        this.trainingItemService.getTrainingItemListForModal(this.searchModel).subscribe(function (items) { return _this.trainingitems = items; }, function (error) { return _this.errorMessage = error; });
+                        console.log(this.data.Items);
+                        //for (var j = 0; j < this.data.Items.length; j++){
+                        //    this.isCheck(this.data.Items[j]);
+                        //}
                     }
                 };
+                TrainingListComponent.prototype.IsIntheList = function (id) {
+                    for (var i = 0; i < this.trainingItems.length; i++) {
+                        if (this.trainingItems[i] === id) {
+                            return true;
+                        }
+                    }
+                    return false;
+                };
+                //isCheck(item: string) {
+                //    for (var i = 0; i < this.trainingitems.length; i++) {
+                //        if (item == this.trainingitems[i].Id) {
+                //            (jQuery('#chkItem-' + i).attr("checked", "checked"));
+                //            break;
+                //        }
+                //    }
+                //}
                 TrainingListComponent.prototype.isFormChanged = function (value) {
                     var _this = this;
                     this.trainingService.get(this.data.Id).subscribe(function (oldData) {
                         _this.isFormDataChanged(oldData);
                     });
+                };
+                TrainingListComponent.prototype.onChangeItem = function (e, id) {
+                    this.isFormValuesChanged = true;
+                    if (e.target.checked) {
+                        this.trainingItems.push(id);
+                        console.log(this.trainingItems);
+                    }
+                    else {
+                        for (var i = 0; i < this.trainingItems.length; i++) {
+                            if (this.trainingItems[i] === id) {
+                                this.trainingItems.splice(i, 1);
+                            }
+                        }
+                    }
                 };
                 TrainingListComponent.prototype.isFormDataChanged = function (oldData) {
                     if (JSON.stringify(this.data) === JSON.stringify(oldData))
@@ -166,13 +213,24 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                     else
                         this.isFormValuesChanged = true;
                 };
+                TrainingListComponent.prototype.changeItemSelect = function (value) {
+                    console.log(value);
+                };
+                TrainingListComponent.prototype.onChange = function (k) {
+                    if (jQuery('#chkItem-' + k).prop('checked')) {
+                        jQuery('#chkItem-' + k).prop('checked', false);
+                    }
+                    else {
+                        jQuery('#chkItem-' + k).prop('checked', true);
+                    }
+                };
                 return TrainingListComponent;
             }());
             TrainingListComponent = __decorate([
                 core_1.Component({
                     selector: 'training',
                     templateUrl: 'app/Training/training-list/training-list.component.html',
-                    providers: [training_service_1.TrainingService, forms_1.FormBuilder, brand_service_1.BrandService, trainingitem_service_1.TrainingItemService]
+                    providers: [training_service_1.TrainingService, forms_1.FormBuilder, brand_service_1.BrandService, trainingitem_service_1.TrainingItemService, reltrainingtrainingitem_service_1.RelTrainingTrainingItemService]
                 }),
                 __metadata("design:paramtypes", [training_service_1.TrainingService,
                     auth_service_1.AuthService,
@@ -180,7 +238,8 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                     forms_1.FormBuilder,
                     training_service_1.TrainingService,
                     brand_service_1.BrandService,
-                    trainingitem_service_1.TrainingItemService])
+                    trainingitem_service_1.TrainingItemService,
+                    reltrainingtrainingitem_service_1.RelTrainingTrainingItemService])
             ], TrainingListComponent);
             exports_1("TrainingListComponent", TrainingListComponent);
         }

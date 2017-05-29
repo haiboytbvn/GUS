@@ -97,24 +97,25 @@
                         </div>
                         <div class="col_four_fifth col_last">
                             <input formControlName="age" type="text" class="form-control" placeholder="Enter age" value="this.data.Age" autofocus id="txtAge" />
-                           
                         </div>
                         <div class="col_one_fifth"></div>
-                        <div class="col_four_fifth col_last" >
+                        <div class="col_four_fifth col_last">
                             <input id="checkbox-2" class="checkbox-style" name="checkbox-2" type="checkbox" formControlName="isactive" value="this.data.IsActive" autofocus>
                             <label for="checkbox-2" class="checkbox-style-1-label checkbox-small">Active</label>
                         </div>
                         <div class="col_full nomargin center">
-                            <div *ngIf="trainingitems">
-                                <div *ngFor="let item of trainingitems">
-                                    <input class="checkbox-style" type="checkbox" />
-                                    <label class="checkbox-style-1-label checkbox-small">{{item.Value}}</label>
-                                </div>
+                            <div >
+                                <ul *ngIf="trainingitems">
+                                    <li *ngFor="let item of trainingitems; let k=index;">
+                                        <input  type="checkbox" value="{{item.Id}}" (click)="onChangeItem($event, item.Id)" />
+                                        <label>{{item.Value}}</label>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        
-                         <div class="col_full nomargin center">
-                             <input type="button" value="Save" class="button button-small button-red leftmargin-md notopmargin nobottommargin" [disabled]="!trainingAddForm.valid" (click)="onSubmit(this.trainingAddForm.value)">
+
+                        <div class="col_full nomargin center">
+                            <input type="button" value="Save" class="button button-small button-red leftmargin-md notopmargin nobottommargin" [disabled]="!trainingAddForm.valid" (click)="onSubmit(this.trainingAddForm.value)">
                         </div>
                     </div>
                 </div>
@@ -152,9 +153,20 @@
                             <label for="checkbox-1" class="checkbox-style-1-label checkbox-small">Active</label>
                         </div>
                         <div class="col_full nomargin center">
+                            <div>
+                                <ul *ngIf="trainingitems">
+                                    <li *ngFor="let item of trainingitems; let k=index;">
+                                        <input type="checkbox"  [checked]="IsIntheList(item.Id)"  value="{{item.Id}}" (click)="onChangeItem($event, item.Id)" />
+
+                                        <label>{{item.Value}}</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col_full nomargin center">
                             <input type="button" value="Save" class="button button-small button-red leftmargin-md notopmargin nobottommargin" [disabled]="!trainingEditForm.valid || !isFormValuesChanged" (click)="onUpdate(data)">
                         </div>
-                    </div>                
+                    </div>
                 </div>
             </div>
         </div>

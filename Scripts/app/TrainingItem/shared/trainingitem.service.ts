@@ -20,6 +20,14 @@ export class TrainingItemService {
             .map(response => response.json())
             .catch(this.handleError);
     }
+    
+
+    getTrainingItemListForModal(data: GeneralSearchModel) {
+        var url = this.baseUrl + "GetTrainingItemListForModal";
+        return this.http.post(url, JSON.stringify(data), this.getRequestOptions())
+            .map(response => response.json())
+            .catch(this.handleError);
+    }
 
     // calls the [POST] /api/items/ Web API method to add a new item.
     add(data: TrainingItem) {

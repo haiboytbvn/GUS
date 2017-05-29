@@ -1,0 +1,125 @@
+<div class="library-header">
+    <h3 class="nomargin">Wash</h3>
+    <form #searchForm="ngForm" (ngSubmit)="onsearchSubmit(searchForm.value)">
+        <div class="section-filter">
+            <div class="row bottommargin-sm">
+                <div class="col-md-2 noleftpadding">
+                    <label>Wash Code</label>
+                </div>
+                <div class="col-md-4 noleftpadding" *ngIf="ACdata">
+                    <select name="code" class="form-control" ngModel>
+                        <option value="">Select one</option>
+                        <option *ngFor="let color of Dropdowndata?.Data" value="{{color.Code}}">{{color.Code}}</option>
+                    </select>
+
+                </div>
+                <div class="col-md-2 noleftpadding">
+                    <label>Vendor Wash Code</label>
+                </div>
+                <div class="col-md-4 noleftpadding">
+                    <select class="form-control" name="buyercode" ngModel>
+                        <option value="">Select one</option>
+                        <option *ngFor="let color of Dropdowndata?.Data" value="{{color.BuyerCode}}">{{color.BuyerCode}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row bottommargin-sm">
+                <div class="col-md-2 noleftpadding">&nbsp;</div>
+                <div class="col-md-8 nopadding">
+                    <input type="text" name="keyword" class="form-control" ngModel />
+                </div>
+                <div class="col-md-2 noleftpadding">
+                    <input class="button button-small nomargin" value="Search" name="Search" type="submit">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="library-content-container">
+
+    <div class="col_full notopmargin nobottommargin tright">
+        <ul class="pagination-filter" *ngFor="let size of this.pagesizearr">
+            <li *ngIf="this.ACdata?.Paging?.PageSize==size && size!=0" class="active">
+                <a href="javascript:void(0);" (click)="changeSize(size)">{{size}}</a>
+            </li>
+            <li *ngIf="this.ACdata?.Paging?.PageSize!=size && size!=0">
+                <a href="javascript:void(0);" (click)="changeSize(size)">{{size}}</a>
+            </li>
+            <li *ngIf="size==0 && this.ACdata?.Paging?.PageNumber!=0 ">
+                <a href="javascript:void(0);" (click)="changeSize(0)">All</a>
+            </li>
+            <li *ngIf="size==0 && this.ACdata?.Paging?.PageNumber==0 " class="active">
+                <a href="javascript:void(0);" (click)="changeSize(0)">All</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col_full notopmargin nobottommargin col_last tright">
+        <input type="button" value="Add New" class="button button-small button-red leftmargin-md notopmargin nobottommargin magin-fix" (click)="onAdd()">
+    </div>
+    <div class="clear"></div>
+
+    <div class="col_full library-content">
+        <table class="libraryTable manyCols">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th class="sorting">Buyer<br>Acessory Code</th>
+                    <th class="sorting">Wash<br>Type</th>
+                    <th class="sorting">Wash<br>Category</th>
+                    <th class="sorting">Product<br>Name</th>
+                    <th class="sorting">Description</th>
+                    <th class="sorting">Department</th>
+                    <th class="sorting">Division</th>
+                    <th class="sorting">Brand</th>
+                    <th class="sorting">Recipe</th>
+                    <th class="sorting">Color</th>
+                    <th class="sorting">Supplier</th>
+                    <th class="sorting">Supplier<br>ref code</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let acc of ACdata?.Data">
+                    <td><div class="thumbnail-placeholder"><img src="{{acc.Thumbnail}}"></div></td>
+                    <td>{{acc.BuyerCode}}</td>
+                    <td>{{acc.WashType}}</td>
+                    <td>{{acc.WashCategory}}</td>
+                    <td>{{acc.WashProductName}}</td>
+                    <td>{{acc.Description}}</td>
+                    <td>{{acc.Department}}</td>
+                    <td>{{acc.Division}}</td>
+                    <td>{{acc.Brand}}</td>
+                    <td>{{acc.Recipe}}</td>
+                    <td>{{acc.Color}}</td>
+                    <td>{{acc.Supplier}}</td>
+                    <td>{{acc.SupplierCode}}</td>
+                    <td><a href="javascript:void(0);" (click)="onEdit(acc.Id)"><img src="images/icons/icon-edit.png"></a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="clear"></div>
+
+    <div class="col_five_sixth notopmargin nobottommargin center">
+        <ul class="pagination-filter" *ngFor="let page of ACdata?.Paging.PageCount; let i=index;">
+            <li *ngIf="i==0 && page!=ACdata?.Paging.PageNumber && ACdata?.Paging.PageCount.length>0">
+                <a href="javascript:void(0);" *ngIf="page!=0" (click)="changePage(page)">&laquo;</a>
+                <a href="javascript:void(0);" *ngIf="page==0">&laquo;</a>
+            </li>
+
+            <li *ngIf="ACdata?.Paging.PageCount[i]==ACdata?.Paging.PageNumber && i!=0 && i!=this.ACdata?.Paging?.PageCount.length -1 && ACdata?.Paging.PageCount.length>0" class="active" (click)="changePage(page)"><a href="javascript:void(0);">{{page}}</a></li>
+            <li *ngIf="ACdata?.Paging.PageCount[i]!=ACdata?.Paging.PageNumber && i!=0 && i!=this.ACdata?.Paging?.PageCount.length -1 && ACdata?.Paging.PageCount.length>0" (click)="changePage(page)"><a href="javascript:void(0);">{{page}}</a></li>
+            <li *ngIf="i==this.ACdata?.Paging?.PageCount.length -1 && ACdata?.Paging.PageCount.length>0">
+                <a *ngIf="page!=0" (click)="changePage(page)">&raquo;</a>
+                <a *ngIf="page==0">&raquo;</a>
+            </li>
+
+        </ul>
+        <div class="pagination-numbers">{{this.ACdata?.Paging?.Show}} of {{this.ACdata?.Paging?.Total}}</div>
+    </div>
+    <div class="col_one_sixth notopmargin nobottommargin col_last tright">
+        <input type="button" value="Add New" class="button button-small button-red leftmargin-md notopmargin nobottommargin" (click)="onAdd()">
+    </div>
+</div>

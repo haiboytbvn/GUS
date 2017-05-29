@@ -3,7 +3,7 @@
         public Id: string,
         public IsActive: boolean,
         public Name: string,
-        public Age: string
-
+        public Age: string,
+        public Items: string[]
     ) { }
 }

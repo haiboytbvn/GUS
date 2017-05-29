@@ -1,0 +1,13 @@
+﻿<div class="col_full nomargin center">
+ 
+    <div *ngIf="trainingitems">
+        <div *ngFor="let item of trainingitems">
+            <ul>
+                <li>
+                    <input class="checkbox-style" type="checkbox" formControlName="isselected" value="this.data.TrainingItem" />
+                    <label class="checkbox-style-1-label checkbox-small">{{item.Value}}</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
