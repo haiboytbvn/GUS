@@ -42,7 +42,8 @@
                     <td *ngIf="training.IsActive">Active</td>
                     <td *ngIf="!training.IsActive">Inactive</td>
                     <td><a href="javascript:void(0);" (click)="onEdit(training.Id)" data-toggle="modal" data-target="#myModalEdit"><img src="images/icons/icon-edit.png"></a></td>
-                </tr>
+                    <td><a href="javascript:void(0);" (click)="onDelete(training.Id)" data-toggle="modal" data-target="#myModalDelete">Delete</a></td>
+                 </tr>
             </tbody>
         </table>
     </div>
@@ -171,4 +172,54 @@
             </div>
         </div>
     </form>
+</div>
+
+<!-- Delete Modal -->
+<div id="myModalDelete" class="modal fade" role="dialog">
+    <div *ngIf="data">
+        <input type="hidden" />
+        <div class="modal-dialog modal-md">
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">Delete Training</h4>
+                    </div>
+                    <div class="modal-body edit-sm">
+                        <div class="col_one_fifth">
+                            <label>Name:</label>
+                        </div>
+                        <div class="col_four_fifth col_last">
+                            <p>{{data.Name}}</p>
+                            <input name="hd-id" type="hidden" #id="ngModel" [(ngModel)]="data.Id" />
+                        </div>
+                        <div class="col_one_fifth">
+                            <label>Age:</label>
+                        </div>
+                        <div class="col_four_fifth col_last">
+                            <p>{{data.Age}}</p>
+                        </div>
+                        <!--<div class="col_four_fifth col_last">
+                            <input id="checkbox-1" class="checkbox-style" name="checkbox-1" type="checkbox" [(ngModel)]="data.IsActive" #isActive="ngModel" (ngModelChange)="isFormChanged($event)">
+                            <label for="checkbox-1" class="checkbox-style-1-label checkbox-small">Active</label>
+                        </div>
+                        <div class="col_full nomargin center">
+                            <div>
+                                <ul *ngIf="trainingitems">
+                                    <li *ngFor="let item of trainingitems; let k=index;">
+                                        <input type="checkbox" [checked]="IsIntheList(item.Id)" value="{{item.Id}}" (click)="onChangeItem($event, item.Id)" />
+
+                                        <label>{{item.Value}}</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>-->
+                        <div class="col_full nomargin center">
+                            <input type="button" value="Delete" class="button button-small button-red leftmargin-md notopmargin nobottommargin"  (click)="onRemove(data.Id)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

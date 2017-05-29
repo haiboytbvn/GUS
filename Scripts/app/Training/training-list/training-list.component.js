@@ -213,16 +213,34 @@ System.register(["@angular/core", "@angular/forms", "../shared/training.service"
                     else
                         this.isFormValuesChanged = true;
                 };
-                TrainingListComponent.prototype.changeItemSelect = function (value) {
-                    console.log(value);
+                TrainingListComponent.prototype.onDelete = function (id) {
+                    var _this = this;
+                    this.itemid = id;
+                    if (id !== "") {
+                        this.trainingService.get(id).subscribe(function (data) {
+                            _this.data = data;
+                        });
+                    }
                 };
-                TrainingListComponent.prototype.onChange = function (k) {
-                    if (jQuery('#chkItem-' + k).prop('checked')) {
-                        jQuery('#chkItem-' + k).prop('checked', false);
-                    }
-                    else {
-                        jQuery('#chkItem-' + k).prop('checked', true);
-                    }
+                TrainingListComponent.prototype.onRemove = function (id) {
+                    var _this = this;
+                    this.trainingService.delete(id).subscribe(function (data) {
+                        if (data.error == null) {
+                            _this.data = data;
+                            _this.trainingService.getTrainingList(_this.searchModel).subscribe(function (items) { return _this.ACdata = items; }, function (error) { return _this.errorMessage = error; });
+                            alert("deleted successfully");
+                            jQuery('#myModalDelete').modal('hide');
+                            _this.itemid == "";
+                        }
+                        else {
+                            // update failure
+                            _this.errorMessage = data.error;
+                            alert(_this.errorMessage);
+                        }
+                    }, function (error) {
+                        _this.errorMessage = error;
+                        alert(_this.errorMessage);
+                    });
                 };
                 return TrainingListComponent;
             }());

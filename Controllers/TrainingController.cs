@@ -136,7 +136,10 @@ namespace GUSLibrary.Controllers
                     IsActive = true,
                     IsDeleted = false,
                     IsLatest = true,
-                    DateCreated = DateTime.Today.Date
+                    Version = 0,
+                    DateCreated = DateTime.Today.Date,
+                    DateModified = DateTime.Today.Date
+                    
                 };
                 DbContext.RelTrainingTrainingItems.Add(rel);
             }
@@ -188,7 +191,7 @@ namespace GUSLibrary.Controllers
                     var olddatas = DbContext.RelTrainingTrainingItems.Where(x => x.TrainingId == data.Id).ToList();
                     foreach(var olddata in olddatas)
                     {
-                        olddata.IsDeleted = true;
+                        olddata.TrainingId = training.Id;
                         olddata.IsLatest = false;
                     }
 
@@ -202,7 +205,9 @@ namespace GUSLibrary.Controllers
                             IsActive = true,
                             IsDeleted = false,
                             IsLatest = true,
-                            DateCreated = DateTime.Today.Date
+                            DateCreated = DateTime.Today.Date,
+                            DateModified = DateTime.Today.Date
+                            
                         };
                         DbContext.RelTrainingTrainingItems.Add(rel);
                     }
@@ -226,6 +231,24 @@ namespace GUSLibrary.Controllers
             var item = DbContext.Trainings.FirstOrDefault(i => i.Id.Equals(id));
             if (item != null)
             {
+                //find soonest version and set Latest = true
+                
+                var soonestTraining = DbContext.Trainings.Where(x =>
+                    (x.Name == item.Name) &&
+                    (x.IsActive == item.IsActive) &&
+                    (x.IsDeleted == false) &&
+                    (x.IsLatest == false) &&
+                    (x.Version == item.Version - 1)
+                    ).FirstOrDefault();
+
+                if(soonestTraining != null)
+                {
+                    soonestTraining.IsLatest = true;
+                    DbContext.Trainings.Update(soonestTraining);
+                }
+               
+
+                // set isDeleted = true
                 item.IsDeleted = true;
                 item.IsLatest = false;
                 DbContext.Trainings.Update(item);

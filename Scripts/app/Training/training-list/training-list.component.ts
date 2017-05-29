@@ -73,7 +73,7 @@ export class TrainingListComponent {
                 isselected: [false]
             }
         );
-        this.data = new Training("", false, "", "",[]);
+        this.data = new Training("", false, "", "", []);
         this.itemid = "";
         this.reltrainingtrainingitems = new Array<RelTrainingTrainingItem>();
     }
@@ -94,21 +94,21 @@ export class TrainingListComponent {
     }
 
     onSubmit(data: any) {
-     // get items id arry
-       
-        
+        // get items id arry
+
+
 
         var training = new Training("", data.isactive, data.name, data.age, this.trainingItems);
         this.trainingService.add(training).subscribe((data) => {
             if (data.error == null) {
-                       
+
                 this.trainingService.getTrainingList(this.searchModel).subscribe(items => this.ACdata = items, error => this.errorMessage = <any>error);
                 alert("added successfully");
-                
-                this.data = new Training("", false, "", "",[]);
+
+                this.data = new Training("", false, "", "", []);
                 jQuery('#txtName').val('');
                 jQuery('#ckIsActive').prop('checked', true);
-                
+
             } else {
                 // update failure
                 this.errorMessage = data.error;
@@ -133,7 +133,7 @@ export class TrainingListComponent {
         this.trainingItems = [];
     }
     onUpdate(data: any) {
-        
+
         this.data.Items = this.trainingItems;
         this.trainingService.update(this.data).subscribe((data) => {
             if (data.error == null) {
@@ -173,7 +173,7 @@ export class TrainingListComponent {
             //    this.isCheck(this.data.Items[j]);
             //}
         }
-       
+
     }
 
 
@@ -221,17 +221,38 @@ export class TrainingListComponent {
         else
             this.isFormValuesChanged = true;
     }
-    changeItemSelect(value:any) {
-        console.log(value);
+
+
+    onDelete(id: string) {
+        this.itemid = id;
+        if (id !== "") {
+            this.trainingService.get(id).subscribe((data) => {
+                this.data = data;
+            });
+        }
     }
 
-    onChange(k: number) {
-        if (jQuery('#chkItem-' + k).prop('checked')) {
-            jQuery('#chkItem-' + k).prop('checked', false);
-        }
-        else {
-            jQuery('#chkItem-' + k).prop('checked', true);
-        }
+    onRemove(id: string) {
+        this.trainingService.delete(id).subscribe((data) => {
+            if (data.error == null) {
+                this.data = data;
+                this.trainingService.getTrainingList(this.searchModel).subscribe(items => this.ACdata = items, error => this.errorMessage = <any>error);
+                alert("deleted successfully");
+                jQuery('#myModalDelete').modal('hide');
+                this.itemid == "";
+            }
+            else {
+                // update failure
+                this.errorMessage = data.error;
+                alert(this.errorMessage);
+            }
+        },
+            (error) => {
+                this.errorMessage = error;
+                alert(this.errorMessage);
+            }
+        );
+
     }
+
 }
-
